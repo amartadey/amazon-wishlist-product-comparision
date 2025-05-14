@@ -47,7 +47,7 @@ pip install keyboard
 1. Run the script:
 
 ```bash
-python amazon_wishlist_scraper.py
+python wishlist_scraper.py
 ```
 
 2. If no default wishlist URL is specified in the code, you'll be prompted to enter one.

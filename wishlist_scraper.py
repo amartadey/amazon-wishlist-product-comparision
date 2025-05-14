@@ -315,7 +315,7 @@ def scrape_wishlist(wishlist_url):
                 # Calculate value per page
                 value_per_page = None
                 if page_count and price and price > 0:
-                    value_per_page = page_count / price
+                    value_per_page = price / page_count
                 
                 book_data = {
                     "title": book_title,
