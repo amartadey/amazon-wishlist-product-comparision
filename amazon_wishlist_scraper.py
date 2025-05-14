@@ -5,9 +5,7 @@ import json
 import signal
 import sys
 import os
-import threading
 import keyboard
-from tkinter import ttk, Tk, Label, StringVar
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -21,9 +19,6 @@ books_global = []
 current_book = 0
 total_books = 0
 stop_requested = False
-progress_window = None
-progress_var = None
-status_var = None
 
 def setup_driver():
     """Set up and return a Chrome webdriver with appropriate options."""
@@ -56,11 +51,8 @@ def extract_price(price_text):
 
 def get_book_details(driver, link):
     """Navigate to the book page and extract the page count and review count."""
-    global status_var
-    
     try:
-        if status_var:
-            status_var.set(f"Processing: {link.split('/')[-2] if '/' in link else link}")
+        print(f"Processing: {link.split('/')[-2] if '/' in link else link}")
         
         driver.get(link)
         time.sleep(3)  # Increased wait time for page to load
@@ -182,100 +174,51 @@ def find_pages_in_book_info(driver):
         pass
     return None
 
-def update_progress():
-    """Update the progress bar."""
-    global current_book, total_books, progress_var
-    
-    if progress_var and total_books > 0:
-        progress_value = (current_book / total_books) * 100
-        progress_var.set(progress_value)
+def print_progress_bar(iteration, total, prefix='', suffix='', length=50, fill='█'):
+    """Print a progress bar in the console."""
+    if total == 0:
+        return
         
-        # Update the window - needs to be called to refresh the UI
-        if progress_window:
-            progress_window.update()
-
-def setup_progress_window():
-    """Set up the progress window with Tkinter."""
-    global progress_window, progress_var, status_var
+    percent = int(100 * (iteration / float(total)))
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + '-' * (length - filled_length)
     
-    progress_window = Tk()
-    progress_window.title("Amazon Wishlist Scraper")
-    progress_window.geometry("600x150")
+    # Clear the line and print the progress bar
+    print(f'\r{prefix} |{bar}| {percent}% {suffix}', end='\r')
     
-    # Create a label for instructions
-    instruction_label = Label(progress_window, text="Press 'Ctrl+C' to stop and save results at any time", font=("Arial", 10))
-    instruction_label.pack(pady=5)
-    
-    # Create a variable to store progress value
-    progress_var = ttk.DoubleVar()
-    
-    # Create a variable for status message
-    status_var = StringVar()
-    status_var.set("Initializing...")
-    
-    # Create a progress bar
-    progress_bar = ttk.Progressbar(
-        progress_window, 
-        orient="horizontal", 
-        length=500, 
-        mode="determinate",
-        variable=progress_var
-    )
-    progress_bar.pack(pady=10)
-    
-    # Create a label for the status
-    status_label = Label(progress_window, textvariable=status_var, font=("Arial", 9))
-    status_label.pack(pady=5)
-    
-    # Make the window stay on top
-    progress_window.attributes('-topmost', True)
-    
-    # Configure the window close button to trigger stop_scraping
-    progress_window.protocol("WM_DELETE_WINDOW", handle_keyboard_interrupt)
-    
-    return progress_window
+    # Print new line on completion
+    if iteration == total:
+        print()
 
 def handle_keyboard_interrupt(*args):
-    """Handle keyboard interrupt (Ctrl+C) and window close events."""
-    global stop_requested, books_global, status_var
+    """Handle keyboard interrupt (Ctrl+C)."""
+    global stop_requested, books_global
     
     if not stop_requested:
         print("\nStop requested. Saving current results...")
-        if status_var:
-            status_var.set("Stop requested. Saving current results...")
-            
         stop_requested = True
         
         # Save the data collected so far
         if books_global:
             save_to_csv(books_global)
             save_to_json(books_global)
+            print(f"Saved {len(books_global)} books to files. Terminating...")
             
-            if status_var:
-                status_var.set(f"Saved {len(books_global)} books to files. Terminating...")
-                progress_window.update()
-                
         # Wait a moment to show the message
         time.sleep(2)
         
-        # Close the progress window if it exists
-        if progress_window:
-            progress_window.destroy()
-            
         # Exit the program
         sys.exit(0)
 
 def scrape_wishlist(wishlist_url):
     """Scrape the Amazon wishlist and return the book details."""
-    global books_global, current_book, total_books, stop_requested, status_var
+    global books_global, current_book, total_books, stop_requested
     
     driver = setup_driver()
     books = []
     
     try:
-        if status_var:
-            status_var.set(f"Loading wishlist: {wishlist_url}")
-            
+        print(f"Loading wishlist: {wishlist_url}")
         driver.get(wishlist_url)
         time.sleep(5)  # Increased wait time for page to fully load
         
@@ -291,9 +234,6 @@ def scrape_wishlist(wishlist_url):
         
         # Scroll down to trigger lazy loading of all books
         print("Scrolling to load all books...")
-        if status_var:
-            status_var.set("Scrolling to load all books...")
-            
         scroll_to_load_all_items(driver)
         
         # Process books by getting their links first, then navigate to each one individually
@@ -308,8 +248,6 @@ def scrape_wishlist(wishlist_url):
         )
         
         print(f"Found {len(item_containers)} potential book items")
-        if status_var:
-            status_var.set(f"Found {len(item_containers)} potential book items")
         
         # First, gather all the links, titles, and prices in one go
         for item in item_containers:
@@ -344,7 +282,7 @@ def scrape_wishlist(wishlist_url):
                             except (NoSuchElementException, StaleElementReferenceException):
                                 book_prices.append(None)
                         
-                        print(f"Found book: {book_title}, Link: {book_link}")
+                        print(f"Found book: {book_title}")
                 except (NoSuchElementException, StaleElementReferenceException):
                     continue
             except Exception as e:
@@ -355,22 +293,21 @@ def scrape_wishlist(wishlist_url):
         total_books = len(book_links)
         print(f"Total unique books found: {total_books}")
         
-        if status_var:
-            status_var.set(f"Total unique books found: {total_books}")
-        
         # Now process each book individually
         for i, book_link in enumerate(book_links):
             if stop_requested:
                 break
                 
             current_book = i + 1
-            update_progress()
+            
+            # Display CLI progress bar
+            print_progress_bar(current_book, total_books, 
+                            prefix=f'Processing books: {current_book}/{total_books}',
+                            suffix='Complete', length=50)
             
             try:
                 book_title = book_titles[i] if i < len(book_titles) else f"Book {i+1}"
                 price = book_prices[i] if i < len(book_prices) else None
-                
-                print(f"Processing book {current_book}/{total_books}: {book_title}, Price: {price}")
                 
                 # Navigate to the book page to get additional details
                 page_count, review_count = get_book_details(driver, book_link)
@@ -398,7 +335,7 @@ def scrape_wishlist(wishlist_url):
                     save_to_json(books)
                     
             except Exception as e:
-                print(f"Error processing book {current_book}: {e}")
+                print(f"\nError processing book {current_book}: {e}")
                 continue
             
     except Exception as e:
@@ -411,7 +348,7 @@ def scrape_wishlist(wishlist_url):
 
 def scroll_to_load_all_items(driver, max_scroll_attempts=15, scroll_pause_time=2):
     """Scroll down repeatedly to trigger lazy loading of all items."""
-    global stop_requested, status_var
+    global stop_requested
     
     # Get initial height
     last_height = driver.execute_script("return document.body.scrollHeight")
@@ -436,16 +373,12 @@ def scroll_to_load_all_items(driver, max_scroll_attempts=15, scroll_pause_time=2
             current_item_count = len(items)
             
             print(f"Scroll {scroll_attempt+1}/{max_scroll_attempts}: Found {current_item_count} items")
-            if status_var:
-                status_var.set(f"Scroll {scroll_attempt+1}/{max_scroll_attempts}: Found {current_item_count} items")
             
             # If no new items are loaded after several scrolls, we've probably reached the end
             if current_item_count == last_item_count:
                 no_change_count += 1
                 if no_change_count >= 3:  # Stop if no new items after 3 consecutive scrolls
                     print("No new items loaded after multiple scrolls. Assuming all items are loaded.")
-                    if status_var:
-                        status_var.set("No new items loaded after multiple scrolls. All items loaded.")
                     break
             else:
                 no_change_count = 0  # Reset counter if we found new items
@@ -465,8 +398,6 @@ def scroll_to_load_all_items(driver, max_scroll_attempts=15, scroll_pause_time=2
                 if newer_height == new_height:
                     # If still no change, we've probably reached the end
                     print("Reached end of page - no more scrolling needed")
-                    if status_var:
-                        status_var.set("Reached end of page - no more scrolling needed")
                     break
                     
             last_height = new_height
@@ -490,7 +421,7 @@ def save_to_csv(books, filename="amazon_books.csv"):
                 "link": book["link"]
             })
     
-    print(f"Data saved to {filename}")
+    print(f"\nData saved to {filename}")
 
 def save_to_json(books, filename="amazon_books.json"):
     """Save the book details to a JSON file."""
@@ -518,10 +449,18 @@ def is_valid_amazon_wishlist_url(url):
     return True
 
 def main():
-    global stop_requested, progress_window
+    global stop_requested
     
     # Setup keyboard shortcut for interrupting the program
     keyboard.add_hotkey('ctrl+c', handle_keyboard_interrupt)
+    signal.signal(signal.SIGINT, handle_keyboard_interrupt)
+    
+    # Display welcome message and instructions
+    print("=" * 70)
+    print("             Amazon Wishlist Book Scraper (CLI Version)")
+    print("=" * 70)
+    print("Press 'Ctrl+C' at any time to stop and save current results.")
+    print("=" * 70)
     
     # Default wishlist URL
     default_wishlist_url = "https://www.amazon.in/hz/wishlist/ls/1YZ6P9CMSTI9C?ref_=wl_share"
@@ -537,12 +476,6 @@ def main():
     
     print(f"Starting to scrape wishlist: {wishlist_url}")
     
-    # Setup the progress window in a separate thread
-    thread = threading.Thread(target=setup_progress_window)
-    thread.daemon = True
-    thread.start()
-    time.sleep(1)  # Wait for window to initialize
-    
     # Try multiple times if needed with a different approach each time
     max_attempts = 2
     books = []
@@ -552,20 +485,14 @@ def main():
             break
             
         print(f"Attempt {attempt} of {max_attempts}...")
-        if status_var:
-            status_var.set(f"Attempt {attempt} of {max_attempts}...")
-            
+        
         books = scrape_wishlist(wishlist_url)
         
         if books and len(books) > 0:
-            print(f"Successfully found {len(books)} books from the wishlist")
-            if status_var:
-                status_var.set(f"Successfully found {len(books)} books from the wishlist")
+            print(f"\nSuccessfully found {len(books)} books from the wishlist")
             break
         elif attempt < max_attempts:
             print("No books found or too few books, retrying with a different approach...")
-            if status_var:
-                status_var.set("No books found, retrying with a different approach...")
             time.sleep(5)  # Wait before retrying
     
     if books:
@@ -573,18 +500,10 @@ def main():
         save_to_json(books)
         print(f"Successfully scraped {len(books)} books from the wishlist")
         print(f"Data saved to amazon_books.csv and amazon_books.json")
-        if status_var:
-            status_var.set(f"Success! Data saved to amazon_books.csv and amazon_books.json")
     else:
         print("No books were found or there was an error scraping the wishlist")
-        if status_var:
-            status_var.set("No books were found or there was an error scraping the wishlist")
     
-    # Keep the progress window open until user closes it
-    if progress_window:
-        # Change window title to indicate completion
-        progress_window.title("Amazon Wishlist Scraper - Completed")
-        progress_window.mainloop()
+    print("\nProgram completed. You can safely exit.")
 
 if __name__ == "__main__":
     try:
