@@ -1,43 +1,57 @@
 [
     {
+        "title": "Creativity: The Psychology of Discovery and Invention",
+        "price": 1175.0,
+        "pages": 480,
+        "reviews": 636,
+        "link": "https://www.amazon.in/dp/0062283251/?coliid=I221P70VQ9MQE7&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+        "value_per_page": 2.4479166666666665,
+        "wishlist_name": "Business Books"
+    },
+    {
         "title": "What Got You Here Won't Get You There: How Successful People Become Even More Successful! [Paperback] Goldsmith, Marshall",
         "price": 262.0,
         "pages": 304,
         "reviews": 1640,
         "link": "https://www.amazon.in/dp/1781251568/?coliid=I2ZU9H0U201DBL&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.8618421052631579
+        "value_per_page": 0.8618421052631579,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Power Of Positive Thinking | A Timeless Self-Help Classic | Unlock the Secrets to Achieving Success and Happiness",
         "price": 199.0,
         "pages": 301,
-        "reviews": 11631,
+        "reviews": 11632,
         "link": "https://www.amazon.in/dp/0091906385/?coliid=I136Q7IDI2SYV4&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.6611295681063123
+        "value_per_page": 0.6611295681063123,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Who Moved My Cheese? by Spencer Johnson | A Motivational Tale on Embracing Change, Overcoming Fear, and Adapting for Personal & Professional Growth",
         "price": 171.0,
         "pages": 96,
-        "reviews": 25488,
+        "reviews": 25489,
         "link": "https://www.amazon.in/dp/0091816971/?coliid=I39TB7643LWBED&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.78125
+        "value_per_page": 1.78125,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Eat That Frog!",
         "price": 268.0,
         "pages": 119,
-        "reviews": 8568,
+        "reviews": 8569,
         "link": "https://www.amazon.in/dp/152309513X/?coliid=I275AL5MNIDPHY&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.2521008403361344
+        "value_per_page": 2.2521008403361344,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Deep Work: Rules for Focused Success in a Distracted World [Paperback] Newport, Cal",
         "price": 246.0,
         "pages": 304,
-        "reviews": 30395,
+        "reviews": 30402,
         "link": "https://www.amazon.in/dp/0349413681/?coliid=I2JFRER7GYNXP5&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.8092105263157895
+        "value_per_page": 0.8092105263157895,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Contagious",
@@ -45,23 +59,26 @@
         "pages": 256,
         "reviews": 7096,
         "link": "https://www.amazon.in/dp/1471111709/?coliid=I3LV63DSLL8QPT&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.265625
+        "value_per_page": 1.265625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Coming Wave: AI, Power and Our Future",
         "price": 424.0,
         "pages": 352,
-        "reviews": 3613,
+        "reviews": 3620,
         "link": "https://www.amazon.in/dp/1529923832/?coliid=I2NG83R173ES0K&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.2045454545454546
+        "value_per_page": 1.2045454545454546,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Magic of Thinking Big, The (L)",
         "price": 370.0,
         "pages": 384,
-        "reviews": 17461,
+        "reviews": 17465,
         "link": "https://www.amazon.in/dp/1785040472/?coliid=IV7Y08AZ6N9SG&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9635416666666666
+        "value_per_page": 0.9635416666666666,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How to Listen with Intention: The Foundation of True Connection, Communication, and Relationships [Paperback] King, Patrick [Paperback] King, Patrick [Paperback] King, Patrick [Paperback] King, Patrick",
@@ -69,31 +86,35 @@
         "pages": 148,
         "reviews": 1859,
         "link": "https://www.amazon.in/dp/0143465120/?coliid=IG6MDL6YEY9TJ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.2635135135135136
+        "value_per_page": 1.2635135135135136,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Kaizen: The Japanese Method for Transforming Habits, One Small Step at a Time",
         "price": 395.0,
         "pages": 272,
-        "reviews": 1472,
+        "reviews": 1473,
         "link": "https://www.amazon.in/dp/1529005353/?coliid=I28JPWBBWNMVSW&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.4522058823529411
+        "value_per_page": 1.4522058823529411,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "7 Habits of Highly Effective People",
         "price": 389.0,
         "pages": 469,
-        "reviews": 14297,
+        "reviews": 14303,
         "link": "https://www.amazon.in/dp/1471195708/?coliid=I3NMPW0EVM4G1C&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.8294243070362474
+        "value_per_page": 0.8294243070362474,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Leadership Strategy and Tactics: Field Manual",
         "price": 440.0,
         "pages": 320,
-        "reviews": 7743,
+        "reviews": 7742,
         "link": "https://www.amazon.in/dp/1529033004/?coliid=I2HIEH4IL5ARM6&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.375
+        "value_per_page": 1.375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Hyperfocus:How to Work Less to Achieve More",
@@ -101,7 +122,8 @@
         "pages": 256,
         "reviews": 3546,
         "link": "https://www.amazon.in/dp/1035036282/?coliid=ICTFCT0T3Y6T6&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.609375
+        "value_per_page": 1.609375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "PITCH ANYTHING",
@@ -109,7 +131,8 @@
         "pages": 240,
         "reviews": 218,
         "link": "https://www.amazon.in/dp/0071332480/?coliid=I1N1XJ4EKECZ63&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.033333333333333
+        "value_per_page": 2.033333333333333,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Art of Spending Money",
@@ -117,15 +140,17 @@
         "pages": 256,
         "reviews": null,
         "link": "https://www.amazon.in/dp/1804093696/?coliid=I2FY91H8H3LF4T&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.40625
+        "value_per_page": 1.40625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "ONLY THE PARANOID SURVIVE: HOW TO SURVIVE THE CRISIS POINTS THAT CHALLENGE EVERY COMPANY (Old Edition)",
         "price": 314.0,
         "pages": 226,
-        "reviews": 364,
+        "reviews": 363,
         "link": "https://www.amazon.in/dp/1861975139/?coliid=IPY2CI4ZVC6OZ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.3893805309734513
+        "value_per_page": 1.3893805309734513,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Made in Japan: Akio Morita and the Sony Corporation/409048",
@@ -133,7 +158,8 @@
         "pages": null,
         "reviews": 76,
         "link": "https://www.amazon.in/dp/0525244654/?coliid=IG3ULFRVDHSSO&colid=1YZ6P9CMSTI9C&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Start. Scale. Exit. Repeat: Serial Entrepreneurs’ Secrets Revealed!",
@@ -141,15 +167,17 @@
         "pages": 472,
         "reviews": 138,
         "link": "https://www.amazon.in/dp/8119792572/?coliid=IWJR3E7G723P1&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.2118644067796611
+        "value_per_page": 1.2118644067796611,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "CELEBRATION OF DISCIPLINE",
         "price": 575.0,
         "pages": 304,
-        "reviews": 4151,
+        "reviews": 4154,
         "link": "https://www.amazon.in/dp/0340979267/?coliid=I2V5LH782YGGSM&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.8914473684210527
+        "value_per_page": 1.8914473684210527,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "To Sell Is Human",
@@ -157,7 +185,8 @@
         "pages": 272,
         "reviews": 4373,
         "link": "https://www.amazon.in/dp/1786891719/?coliid=I3D67KEHW544HE&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.3602941176470589
+        "value_per_page": 1.3602941176470589,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Built To Last",
@@ -165,23 +194,26 @@
         "pages": 342,
         "reviews": 2384,
         "link": "https://www.amazon.in/dp/1844135845/?coliid=I5Q5E1JWRP3GT&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.628654970760234
+        "value_per_page": 2.628654970760234,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "THE BILLIONAIRE'S APPRENTICE",
-        "price": 495.0,
+        "price": 544.0,
         "pages": 512,
         "reviews": 581,
         "link": "https://www.amazon.in/dp/9350097362/?coliid=I2DV6ZJL6KJDZ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.966796875
+        "value_per_page": 1.0625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Upstarts: Uber, Airbnb and the Battle for the New Silicon Valley",
-        "price": 497.0,
+        "price": 475.0,
         "pages": 464,
         "reviews": 1513,
         "link": "https://www.amazon.in/dp/0552172588/?coliid=I3ETO6LZF8GSAH&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.0711206896551724
+        "value_per_page": 1.0237068965517242,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "WORK RULES!",
@@ -189,7 +221,8 @@
         "pages": 416,
         "reviews": 2434,
         "link": "https://www.amazon.in/dp/1444792385/?coliid=IG784E8ERDTZR&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1754807692307692
+        "value_per_page": 1.1754807692307692,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Good To Great",
@@ -197,31 +230,35 @@
         "pages": 320,
         "reviews": 8316,
         "link": "https://www.amazon.in/dp/0712676090/?coliid=I2VFSFS6KI7JQS&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.540625
+        "value_per_page": 2.540625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "10x Is Easier Than 2x",
         "price": 407.0,
         "pages": 296,
-        "reviews": 1914,
+        "reviews": 1916,
         "link": "https://www.amazon.in/dp/9388302850/?coliid=IIK8RU69700JZ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.375
+        "value_per_page": 1.375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Unreasonable Hospitality: The Remarkable Power of Giving People More Than They Expect",
         "price": 599.0,
         "pages": 288,
-        "reviews": 4470,
+        "reviews": 4472,
         "link": "https://www.amazon.in/dp/1529146828/?coliid=I11C0USRS5E3IR&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.079861111111111
+        "value_per_page": 2.079861111111111,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Go-Giver",
         "price": 437.0,
         "pages": null,
-        "reviews": 8944,
+        "reviews": 8943,
         "link": "https://www.amazon.in/dp/B01LYQUUJW/?coliid=I1V15D4IGDU28V&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "TRACTION",
@@ -229,7 +266,8 @@
         "pages": 246,
         "reviews": 8478,
         "link": "https://www.amazon.in/dp/1936661837/?coliid=I4DXJPFAEJB67&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 5.605691056910569
+        "value_per_page": 5.605691056910569,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Money Works: The Guide to Financial Literacy",
@@ -237,15 +275,17 @@
         "pages": 372,
         "reviews": 180,
         "link": "https://www.amazon.in/dp/0143461648/?coliid=I2AM8NS92PBNOO&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.6854838709677419
+        "value_per_page": 0.6854838709677419,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "What They Teach You at Harvard Business School My Two Years Inside the Cauldron of Capitalism by Delves Broughton Philip",
-        "price": 493.0,
+        "price": 469.0,
         "pages": 304,
         "reviews": 453,
         "link": "https://www.amazon.in/dp/0141046481/?coliid=I3E83QZOAU78OL&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.6217105263157894
+        "value_per_page": 1.542763157894737,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "GOOD STRATEGY/BAD STRATEGY (NEW ED)",
@@ -253,7 +293,8 @@
         "pages": 336,
         "reviews": 4450,
         "link": "https://www.amazon.in/dp/1781256179/?coliid=I3G7WIVDIGBGK3&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9345238095238095
+        "value_per_page": 0.9345238095238095,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Four, The",
@@ -261,7 +302,8 @@
         "pages": 336,
         "reviews": 4001,
         "link": "https://www.amazon.in/dp/0552173436/?coliid=I23XUJK2SSN07V&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.4672619047619047
+        "value_per_page": 1.4672619047619047,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Key to Positivity: Why You’ve Got the Comfort Zone All Wrong – and How to Tap Its Power to Live Your Best Life Now",
@@ -269,15 +311,17 @@
         "pages": 336,
         "reviews": 45,
         "link": "https://www.amazon.in/dp/1837823251/?coliid=I28V68E0G5FKA7&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 4.375
+        "value_per_page": 4.375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Innovators",
         "price": 451.0,
         "pages": 560,
-        "reviews": 5712,
+        "reviews": 5715,
         "link": "https://www.amazon.in/dp/1471138801/?coliid=I1PUHP45X3L549&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.8053571428571429
+        "value_per_page": 0.8053571428571429,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Profit First: Transform Your Business from a Cash-Eating Monster to a Money-Making Machine",
@@ -285,15 +329,17 @@
         "pages": 224,
         "reviews": 8229,
         "link": "https://www.amazon.in/dp/821704743X/?coliid=I2FQ3E1M5GZIJP&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.0044642857142856
+        "value_per_page": 2.0044642857142856,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Measure What Matters",
         "price": 560.0,
         "pages": 320,
-        "reviews": 9193,
+        "reviews": 9194,
         "link": "https://www.amazon.in/dp/024134848X/?coliid=I29L3J54LT4HQ9&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.75
+        "value_per_page": 1.75,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Growth: A Reckoning",
@@ -301,15 +347,17 @@
         "pages": 368,
         "reviews": 156,
         "link": "https://www.amazon.in/dp/0241703131/?coliid=I88IY1BYBHMEE&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.823179347826087
+        "value_per_page": 1.823179347826087,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Priceless: The Hidden Psychology of Value",
-        "price": 1288.0,
+        "price": 1207.0,
         "pages": 344,
         "reviews": 109,
         "link": "https://www.amazon.in/dp/1851688293/?coliid=I35SVOQURWAQNX&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.744186046511628
+        "value_per_page": 3.508720930232558,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "MINDSET (REVISED AND UPDATED) [Paperback] Dweck, Carol",
@@ -317,7 +365,8 @@
         "pages": 288,
         "reviews": 10682,
         "link": "https://www.amazon.in/dp/1780332009/?coliid=IN7FYL8MOZ9XH&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.8576388888888888
+        "value_per_page": 0.8576388888888888,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "HBR 20-Minute Manager Boxed Set (10 Book",
@@ -325,39 +374,44 @@
         "pages": 1244,
         "reviews": 440,
         "link": "https://www.amazon.in/dp/1633690954/?coliid=I2PBFU63L8LOML&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.382636655948553
+        "value_per_page": 1.382636655948553,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Harper Collins India Predictably Irrational: The Hidden Forces That Shape Our Decisions",
         "price": 279.0,
         "pages": 304,
-        "reviews": 10655,
+        "reviews": 10657,
         "link": "https://www.amazon.in/dp/0007368542/?coliid=I9S14YDKNAHF1&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9177631578947368
+        "value_per_page": 0.9177631578947368,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Daily Stoic: 366 Meditations on Wisdom, Perseverance, and the Art of Living: Featuring new translations of Seneca, Epictetus, and Marcus Aurelius [Paperback] Holiday Hanselman, Ryan Stephen",
         "price": 405.0,
         "pages": 416,
-        "reviews": 19527,
+        "reviews": 19529,
         "link": "https://www.amazon.in/dp/1781257655/?coliid=I17ZQ91HMHXNRI&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9735576923076923
+        "value_per_page": 0.9735576923076923,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "THE 33 STRATEGIES OF WAR",
         "price": 595.0,
         "pages": 496,
-        "reviews": 4690,
+        "reviews": 4691,
         "link": "https://www.amazon.in/dp/1861979789/?coliid=I1GC98JMMFONUI&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1995967741935485
+        "value_per_page": 1.1995967741935485,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant",
-        "price": 873.0,
+        "price": 872.0,
         "pages": 320,
-        "reviews": 5665,
+        "reviews": 5667,
         "link": "https://www.amazon.in/dp/1625274491/?coliid=I15K3U2Y32Z6X6&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.728125
+        "value_per_page": 2.725,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Goal: A Process of Ongoing Improvement",
@@ -365,15 +419,17 @@
         "pages": 408,
         "reviews": 7561,
         "link": "https://www.amazon.in/dp/0884271951/?coliid=I2AAB9KYQM1TXQ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 4.2254901960784315
+        "value_per_page": 4.2254901960784315,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Million Dollar Weekend: The Surprisingly Simple Way to Launch a 7-Figure Business in 48 Hours",
         "price": null,
         "pages": 240,
-        "reviews": 3117,
+        "reviews": 3119,
         "link": "https://www.amazon.in/dp/0002485427/?coliid=I3OSI0ANP4XXE7&colid=1YZ6P9CMSTI9C&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The E-Myth Revisited : Why Most Small Businesses Don't Work and What to Do About It",
@@ -381,15 +437,17 @@
         "pages": 288,
         "reviews": 11809,
         "link": "https://www.amazon.in/dp/0063357054/?coliid=II3B50RT93ZGI&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.0902777777777777
+        "value_per_page": 1.0902777777777777,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "ReWork: Change the Way You Work Forever",
         "price": 478.0,
         "pages": 288,
-        "reviews": 9800,
+        "reviews": 9801,
         "link": "https://www.amazon.in/dp/0091929784/?coliid=I3KS4BB3LZE7ZD&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.6597222222222223
+        "value_per_page": 1.6597222222222223,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "EFFECTIVE EXECUTIVE",
@@ -397,7 +455,8 @@
         "pages": 208,
         "reviews": 3371,
         "link": "https://www.amazon.in/dp/0060833459/?coliid=I2FOPPSATDX0P3&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.7836538461538463
+        "value_per_page": 3.7836538461538463,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Managing Up: How to Get What You Need from the People in Charge",
@@ -405,7 +464,8 @@
         "pages": 320,
         "reviews": 30,
         "link": "https://www.amazon.in/dp/191170995X/?coliid=I2JMJLIOP0ETIF&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.221875
+        "value_per_page": 2.221875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Personal MBA : Revised and 10 Anv Ed",
@@ -413,7 +473,8 @@
         "pages": 496,
         "reviews": 7469,
         "link": "https://www.amazon.in/dp/0670919535/?coliid=I2RTXTCIDUHXH3&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9435483870967742
+        "value_per_page": 0.9435483870967742,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "12 RULES FOR LIFE book Fresh New Edition",
@@ -421,7 +482,8 @@
         "pages": null,
         "reviews": null,
         "link": "https://www.amazon.in/dp/B0F79P3FBV/?coliid=I16F88HONIBT78&colid=1YZ6P9CMSTI9C&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Quit: The Power of Knowing When to Walk Away",
@@ -429,23 +491,26 @@
         "pages": 336,
         "reviews": 1177,
         "link": "https://www.amazon.in/dp/152914616X/?coliid=I1NKKSBPSHS3AN&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.6369047619047619
+        "value_per_page": 1.6369047619047619,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Scarcity: The True Cost of Not Having En",
-        "price": 638.94,
+        "price": 699.0,
         "pages": 304,
         "reviews": 1339,
         "link": "https://www.amazon.in/dp/0141049197/?coliid=I7YTOEETTJ3EW&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.1017763157894738
+        "value_per_page": 2.299342105263158,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Black Swan, The : The Impact of the High",
         "price": 489.0,
         "pages": 480,
-        "reviews": 7326,
+        "reviews": 7328,
         "link": "https://www.amazon.in/dp/0141034599/?coliid=I32XCBVCI40LID&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.01875
+        "value_per_page": 1.01875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Misbehaving",
@@ -453,23 +518,26 @@
         "pages": 432,
         "reviews": 4530,
         "link": "https://www.amazon.in/dp/0241951224/?coliid=I388DYP5DYKTKZ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1087962962962963
+        "value_per_page": 1.1087962962962963,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Nudge: The Final Edition",
         "price": 906.0,
         "pages": 384,
-        "reviews": 3887,
+        "reviews": 3888,
         "link": "https://www.amazon.in/dp/014313700X/?coliid=IKMCV9UYYCF73&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.359375
+        "value_per_page": 2.359375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The 5 Types of Wealth : A Transformative Guide to Design Your Dream Life",
         "price": 363.0,
         "pages": 384,
-        "reviews": 1263,
+        "reviews": 1272,
         "link": "https://www.amazon.in/dp/9365698154/?coliid=IBQIRR2QXY7C6&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9453125
+        "value_per_page": 0.9453125,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Visual MBA: A Quick Guide to Everything You’ll Learn in Two Years of Business School",
@@ -477,7 +545,8 @@
         "pages": 208,
         "reviews": 663,
         "link": "https://www.amazon.in/dp/024173794X/?coliid=I3SAAEQU7TJGP7&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.125
+        "value_per_page": 2.125,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "CAPitalize Your Sales: The All-In-One Sales Framework that Saves You from Ever Struggling Again and Teaches You How to Sell with Sincerity",
@@ -485,31 +554,35 @@
         "pages": 215,
         "reviews": 5,
         "link": "https://www.amazon.in/dp/1636984762/?coliid=I2K2FHRKULLY2G&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 5.669767441860465
+        "value_per_page": 5.669767441860465,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Skin in the Game: Hidden Asymmetries in Daily Life [Paperback] Taleb, Nassim Nicholas",
         "price": 418.0,
         "pages": 304,
-        "reviews": 6420,
+        "reviews": 6423,
         "link": "https://www.amazon.in/dp/0141982659/?coliid=I1LS22155NBI5O&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.375
+        "value_per_page": 1.375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Antifragile",
         "price": 490.0,
         "pages": 544,
-        "reviews": 7417,
+        "reviews": 7418,
         "link": "https://www.amazon.in/dp/0141038225/?coliid=I2EHBRDTC36BPK&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9007352941176471
+        "value_per_page": 0.9007352941176471,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "A Random Walk Down Wall Street: The Best Investment Guide That Money Can Buy",
         "price": 1390.0,
         "pages": 432,
-        "reviews": 653,
+        "reviews": 654,
         "link": "https://www.amazon.in/dp/1324035439/?coliid=I3EMIEGG41BCOY&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.2175925925925926
+        "value_per_page": 3.2175925925925926,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Tribe of Mentors: Short Life Advice from the Best in the World",
@@ -517,7 +590,8 @@
         "pages": 608,
         "reviews": 4817,
         "link": "https://www.amazon.in/dp/1785041851/?coliid=I257OQCACB354O&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.3585526315789473
+        "value_per_page": 1.3585526315789473,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "No Rules Rules: Netflix and the Culture of Reinvention",
@@ -525,7 +599,8 @@
         "pages": 320,
         "reviews": 6930,
         "link": "https://www.amazon.in/dp/0753560968/?coliid=I1XSQYF6P5EVEG&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.375
+        "value_per_page": 1.375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "No Filter: The Inside Story of Instagram – Winner of the FT Business Book of the Year Award",
@@ -533,7 +608,8 @@
         "pages": 352,
         "reviews": 1889,
         "link": "https://www.amazon.in/dp/1847942547/?coliid=I2H1OOKGEOPFKH&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.5965909090909092
+        "value_per_page": 1.5965909090909092,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How To Read A Book",
@@ -541,23 +617,26 @@
         "pages": 426,
         "reviews": 7056,
         "link": "https://www.amazon.in/dp/0671212095/?coliid=I1HMI6JVDGM4BY&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.8779342723004695
+        "value_per_page": 0.8779342723004695,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Super Brain: Unleashing the explosive power of your mind to maximize health, happiness and spiritual well-being [Paperback] Chopra, Dr Deepak and Tanzi, Rudolph E.",
         "price": 722.0,
         "pages": 336,
-        "reviews": 1689,
+        "reviews": 1690,
         "link": "https://www.amazon.in/dp/1846043670/?coliid=I1I01E0XOG20YM&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.1488095238095237
+        "value_per_page": 2.1488095238095237,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Chanakya Neeti",
         "price": 260.0,
         "pages": 332,
-        "reviews": 2115,
+        "reviews": 2116,
         "link": "https://www.amazon.in/dp/9388423577/?coliid=I1HUQKD2F8B8PJ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.7831325301204819
+        "value_per_page": 0.7831325301204819,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "GRINDING IT OUT",
@@ -565,7 +644,8 @@
         "pages": 218,
         "reviews": 2558,
         "link": "https://www.amazon.in/dp/0312929870/?coliid=I2GKXMHM6ZISLT&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.610091743119266
+        "value_per_page": 3.610091743119266,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "For God, Country, and Coca-Cola: The Definitive History of the Great American Soft Drink and the Company That Makes It",
@@ -573,7 +653,8 @@
         "pages": 560,
         "reviews": 153,
         "link": "https://www.amazon.in/dp/0465029175/?coliid=IPJB5M0AYBU0F&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.101125
+        "value_per_page": 3.101125,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Inside Coca-Cola",
@@ -581,7 +662,8 @@
         "pages": 288,
         "reviews": 177,
         "link": "https://www.amazon.in/dp/1250013712/?coliid=I1ADO4IEQSCM0M&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9444444444444444
+        "value_per_page": 0.9444444444444444,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Grinding It Out",
@@ -589,15 +671,17 @@
         "pages": 224,
         "reviews": 2558,
         "link": "https://www.amazon.in/dp/1250127505/?coliid=I28ASC29JKOR76&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.34375
+        "value_per_page": 1.34375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Everything Store: Jeff Bezos and the Age",
-        "price": 422.0,
+        "price": 423.0,
         "pages": 464,
         "reviews": 12148,
         "link": "https://www.amazon.in/dp/0552167835/?coliid=I2VAQ2YXRMDXE6&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9094827586206896
+        "value_per_page": 0.9116379310344828,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "DELIVERING HAPPINESS:-A PATH TO PROFITS, PASSION, AND PURPOSE",
@@ -605,15 +689,17 @@
         "pages": 304,
         "reviews": 5605,
         "link": "https://www.amazon.in/dp/145550890X/?coliid=IN7PI0H054L1Z&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.8585526315789473
+        "value_per_page": 0.8585526315789473,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Invent and Wander: The Collected Writing: The Collected Writings of Jeff Bezos, With an Introduction by Walter Isaacson [Hardcover] Bezos, Jeff and Isaacson, Walter",
-        "price": 900.0,
+        "price": 888.0,
         "pages": 288,
         "reviews": 3300,
         "link": "https://www.amazon.in/dp/1647820715/?coliid=IGE405WA5DJDO&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.125
+        "value_per_page": 3.0833333333333335,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Hit Refresh",
@@ -621,23 +707,26 @@
         "pages": 288,
         "reviews": 4804,
         "link": "https://www.amazon.in/dp/0008247692/?coliid=I1OK4L6SS8AVUT&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1006944444444444
+        "value_per_page": 1.1006944444444444,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Onward",
         "price": 861.0,
         "pages": 384,
-        "reviews": 1743,
+        "reviews": 1744,
         "link": "https://www.amazon.in/dp/1609613821/?coliid=I29JQB6WGZUPI8&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.2421875
+        "value_per_page": 2.2421875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "THAT WILL NEVER WORK: THE BIRTH OF NETFLIX BY THE FIRST CEO AND CO-FOUNDER MARC RANDOLPH",
-        "price": 409.0,
+        "price": 406.0,
         "pages": 320,
-        "reviews": 4637,
+        "reviews": 4638,
         "link": "https://www.amazon.in/dp/1913068218/?coliid=I3ELCE5IFQ3BJG&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.278125
+        "value_per_page": 1.26875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Amazon Way: Amazon's 14 Leadership Principles",
@@ -645,15 +734,17 @@
         "pages": 168,
         "reviews": 1434,
         "link": "https://www.amazon.in/dp/8183286410/?coliid=IRJKTEOX5CR9G&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.5833333333333333
+        "value_per_page": 1.5833333333333333,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The CEO Factory (PB)",
-        "price": 263.0,
+        "price": 262.0,
         "pages": 272,
         "reviews": 1744,
         "link": "https://www.amazon.in/dp/9353451140/?coliid=I1Y6XCZM53UAMJ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9669117647058824
+        "value_per_page": 0.9632352941176471,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Who",
@@ -661,23 +752,26 @@
         "pages": 208,
         "reviews": 2501,
         "link": "https://www.amazon.in/dp/0345504194/?coliid=I1TGYZ20W4BTDR&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 4.322115384615385
+        "value_per_page": 4.322115384615385,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Working Backwards: Insights, Stories, and Secrets from Inside Amazon",
         "price": 368.0,
         "pages": 304,
-        "reviews": 3160,
+        "reviews": 3161,
         "link": "https://www.amazon.in/dp/1529033845/?coliid=I23BLS1PBWV29W&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.2105263157894737
+        "value_per_page": 1.2105263157894737,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How To Know a Person: The Art of Seeing Others Deeply and Being Deeply Seen",
         "price": 1000.0,
         "pages": 320,
-        "reviews": 4418,
+        "reviews": 4423,
         "link": "https://www.amazon.in/dp/0241670292/?coliid=I220LQGEBWK7IO&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.125
+        "value_per_page": 3.125,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Speech Therapy: 65 Pick-Me-Ups to Get You Through Many of Life's What-The-F*cks; Now with More Words, More Wisdom, and Even More WTFs",
@@ -685,7 +779,8 @@
         "pages": 143,
         "reviews": 11,
         "link": "https://www.amazon.in/dp/0063414058/?coliid=I2GF95P9NDN8RF&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 9.111888111888112
+        "value_per_page": 9.111888111888112,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Advice Trap: Be Humble, Stay Curious & Change the Way You Lead Forever",
@@ -693,23 +788,26 @@
         "pages": 248,
         "reviews": 1493,
         "link": "https://www.amazon.in/dp/1989603602/?coliid=I17G5WK6TFIOQQ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.2903225806451613
+        "value_per_page": 1.2903225806451613,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Leadership Is Language",
-        "price": 699.0,
+        "price": 702.0,
         "pages": 352,
         "reviews": 1192,
         "link": "https://www.amazon.in/dp/0241373662/?coliid=I3K2VMYQDQV4RB&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.9857954545454546
+        "value_per_page": 1.9943181818181819,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Don’t Shut Up",
-        "price": 342.38,
+        "price": 327.28,
         "pages": 280,
         "reviews": 180,
         "link": "https://www.amazon.in/dp/0670099783/?coliid=ICUKEYXJBOJQ3&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.2227857142857144
+        "value_per_page": 1.1688571428571428,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "80/20 Sales and Marketing: The Definitive Guide to Working Less and Making More",
@@ -717,15 +815,17 @@
         "pages": 256,
         "reviews": 1230,
         "link": "https://www.amazon.in/dp/8183286488/?coliid=I23I4WV21XTW9F&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.28515625
+        "value_per_page": 1.28515625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery (English)",
         "price": 242.0,
         "pages": 248,
-        "reviews": 22406,
+        "reviews": 22414,
         "link": "https://www.amazon.in/dp/9355434146/?coliid=I4AM3MHBPAZ0M&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9758064516129032
+        "value_per_page": 0.9758064516129032,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Dead Companies Walking",
@@ -733,39 +833,44 @@
         "pages": 256,
         "reviews": 798,
         "link": "https://www.amazon.in/dp/125089316X/?coliid=I1Z7FXKGQJRU1S&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 4.7890625
+        "value_per_page": 4.7890625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Never Split the Difference: Negotiating as If Your Life Depended on It | Master Negotiation Skills | Proven Techniques for Success in Life & Business",
-        "price": 419.0,
+        "price": 421.0,
         "pages": 288,
-        "reviews": 45392,
+        "reviews": 45406,
         "link": "https://www.amazon.in/dp/1847941494/?coliid=I2WUT1LAQT2MQU&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.4548611111111112
+        "value_per_page": 1.4618055555555556,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Thinking Fast and Slow: Master the Art of Decision-Making Biases and Cognitive Psychology in this Comprehensive Guide on Human Thinking",
         "price": 479.0,
         "pages": 512,
-        "reviews": 31840,
+        "reviews": 31843,
         "link": "https://www.amazon.in/dp/0141033576/?coliid=I1SDKD0RS26RRJ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.935546875
+        "value_per_page": 0.935546875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Principles: Life and Work [Hardcover] Ray Dalio",
         "price": 991.0,
         "pages": 592,
-        "reviews": 18002,
+        "reviews": 18003,
         "link": "https://www.amazon.in/dp/1501124021/?coliid=I33H3C0V1OSH1G&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.6739864864864864
+        "value_per_page": 1.6739864864864864,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Grit",
         "price": 418.0,
         "pages": 464,
-        "reviews": 19096,
+        "reviews": 19097,
         "link": "https://www.amazon.in/dp/1785040200/?coliid=I2D670QKXKJ8EK&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.9008620689655172
+        "value_per_page": 0.9008620689655172,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "EGO IS THE ENEMY [Hardcover] Holiday, Ryan",
@@ -773,7 +878,8 @@
         "pages": 256,
         "reviews": 1385,
         "link": "https://www.amazon.in/dp/1781257019/?coliid=I76CO1DYR2DIH&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.51171875
+        "value_per_page": 1.51171875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Ogilvy On Advertising",
@@ -781,23 +887,26 @@
         "pages": 288,
         "reviews": 217,
         "link": "https://www.amazon.in/dp/1802794964/?coliid=I2W5F5C7SGTHVH&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.5034722222222223
+        "value_per_page": 1.5034722222222223,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Pandeymonium : Piyush Pandey on Advertis: Piyush Pandey on Advertising",
-        "price": 397.0,
+        "price": 394.0,
         "pages": 264,
         "reviews": 882,
         "link": "https://www.amazon.in/dp/0143427652/?coliid=I29QE44NTPW3WM&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.503787878787879
+        "value_per_page": 1.4924242424242424,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "This is Marketing",
         "price": 646.0,
         "pages": 208,
-        "reviews": 5029,
+        "reviews": 5030,
         "link": "https://www.amazon.in/dp/0241370140/?coliid=I3QNT46J8TE063&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.105769230769231
+        "value_per_page": 3.105769230769231,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Creativity Inc. an inspiring look at how creativity can - and should - be harnessed for business success by the founder of Pixar",
@@ -805,15 +914,17 @@
         "pages": 320,
         "reviews": 10095,
         "link": "https://www.amazon.in/dp/0593070100/?coliid=I1FRVN1CWCLUO9&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.9875
+        "value_per_page": 1.9875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Start With Why | A Bestselling Business Book: Discover How Great Leaders Inspire Action and Achieve Success",
         "price": 405.0,
         "pages": 256,
-        "reviews": 8799,
+        "reviews": 8800,
         "link": "https://www.amazon.in/dp/0241958229/?coliid=IB8DY7XNAQCBG&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.58203125
+        "value_per_page": 1.58203125,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Entreleadership",
@@ -821,7 +932,8 @@
         "pages": 320,
         "reviews": 1806,
         "link": "https://www.amazon.in/dp/1451617852/?coliid=IV1LGRTPD4362&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 5.959375
+        "value_per_page": 5.959375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How to Master the Art of Selling",
@@ -829,23 +941,26 @@
         "pages": 416,
         "reviews": 1098,
         "link": "https://www.amazon.in/dp/0446692743/?coliid=IUR94YEG6H5K5&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.175480769230769
+        "value_per_page": 3.175480769230769,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Alchemy",
         "price": 419.0,
         "pages": 320,
-        "reviews": 1871,
+        "reviews": 1872,
         "link": "https://www.amazon.in/dp/0753556529/?coliid=I1M6AH7QLELWTX&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.309375
+        "value_per_page": 1.309375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No",
         "price": null,
         "pages": 164,
-        "reviews": 18133,
+        "reviews": 18140,
         "link": "https://www.amazon.in/dp/173747574X/?coliid=I3Q0WOGORT41MN&colid=1YZ6P9CMSTI9C&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Subliminal: How Your Unconscious Mind Rules Your Behavior",
@@ -853,15 +968,17 @@
         "pages": 272,
         "reviews": 1514,
         "link": "https://www.amazon.in/dp/0307472256/?coliid=IS8GIPLLENQ6Q&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 4.849264705882353
+        "value_per_page": 4.849264705882353,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "CULTURE MAP : DECODING HOW PEOPLE THINK,",
         "price": 695.0,
         "pages": 288,
-        "reviews": 3008,
+        "reviews": 3009,
         "link": "https://www.amazon.in/dp/1610392760/?coliid=I2TFTCM2DWJ4QC&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.4131944444444446
+        "value_per_page": 2.4131944444444446,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Win Every Argument",
@@ -869,31 +986,35 @@
         "pages": 336,
         "reviews": 1281,
         "link": "https://www.amazon.in/dp/9390742439/?coliid=I1LBXEJ82KBUA3&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.3244047619047619
+        "value_per_page": 1.3244047619047619,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "CRUCIAL CONVERSATIONS",
-        "price": 461.0,
+        "price": 440.0,
         "pages": 304,
-        "reviews": 1691,
+        "reviews": 1692,
         "link": "https://www.amazon.in/dp/9355323352/?coliid=I25IXH9D5XF16V&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.5164473684210527
+        "value_per_page": 1.4473684210526316,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Supercommunicators",
         "price": 546.0,
         "pages": 320,
-        "reviews": 2222,
+        "reviews": 2228,
         "link": "https://www.amazon.in/dp/1529939607/?coliid=I1QG8GNA3N4TFK&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.70625
+        "value_per_page": 1.70625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Six Pillars of Self-Esteem",
         "price": 603.0,
         "pages": 368,
-        "reviews": 3182,
+        "reviews": 3183,
         "link": "https://www.amazon.in/dp/0553374397/?coliid=I2KB51QOUBIC1O&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.638586956521739
+        "value_per_page": 1.638586956521739,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Active Listening Techniques:30 Practical Tools to Hone Your Communication Skills",
@@ -901,7 +1022,8 @@
         "pages": 172,
         "reviews": 339,
         "link": "https://www.amazon.in/dp/9389995949/?coliid=I1KCZNHR5FDH2S&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.069767441860465
+        "value_per_page": 1.069767441860465,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Getting to Yes",
@@ -909,7 +1031,8 @@
         "pages": 240,
         "reviews": 10437,
         "link": "https://www.amazon.in/dp/1847940935/?coliid=I1CBN7W9F953PF&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.4958333333333333
+        "value_per_page": 1.4958333333333333,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Art of Dealing With People",
@@ -917,7 +1040,8 @@
         "pages": 70,
         "reviews": 1207,
         "link": "https://www.amazon.in/dp/8183226744/?coliid=I111HS0WXF8W92&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.7857142857142858
+        "value_per_page": 1.7857142857142858,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Atomic Attraction: The Psychology of Attraction",
@@ -925,23 +1049,26 @@
         "pages": 314,
         "reviews": 1782,
         "link": "https://www.amazon.in/dp/1999872223/?coliid=ICHB8GEGO7B3F&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.178343949044586
+        "value_per_page": 3.178343949044586,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "DEFINITIVE BK OF BODY LANGUAGE",
-        "price": 1819.0,
+        "price": 1854.0,
         "pages": 400,
-        "reviews": 2939,
+        "reviews": 2940,
         "link": "https://www.amazon.in/dp/0553804723/?coliid=I1BBIPSSSWE0WC&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 4.5475
+        "value_per_page": 4.635,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Behave: The bestselling exploration of why humans behave as they do [Paperback] Sapolsky, Robert M",
-        "price": 491.0,
+        "price": 502.0,
         "pages": 800,
-        "reviews": 8609,
+        "reviews": 8616,
         "link": "https://www.amazon.in/dp/009957506X/?coliid=I1R0C649BUYEG1&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.61375
+        "value_per_page": 0.6275,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "THE ART OF READING MINDS",
@@ -949,15 +1076,17 @@
         "pages": 256,
         "reviews": 336,
         "link": "https://www.amazon.in/dp/1529391075/?coliid=I1DSQAGWKP5S5T&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.7734375
+        "value_per_page": 1.7734375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Definitive Book of Body Language",
-        "price": 358.0,
+        "price": 338.0,
         "pages": 386,
-        "reviews": 2939,
+        "reviews": 2940,
         "link": "https://www.amazon.in/dp/8183220142/?coliid=I2XNKLUWD0KRRJ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.927461139896373
+        "value_per_page": 0.8756476683937824,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How to Listen with Intention",
@@ -965,7 +1094,8 @@
         "pages": 198,
         "reviews": 1859,
         "link": "https://www.amazon.in/dp/1647431743/?coliid=I3VUQ2F0KGMDT3&colid=1YZ6P9CMSTI9C&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Negotiation Genius",
@@ -973,7 +1103,8 @@
         "pages": 352,
         "reviews": 1128,
         "link": "https://www.amazon.in/dp/0553384112/?coliid=I19L0OHLKOW5UW&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.6846590909090908
+        "value_per_page": 1.6846590909090908,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "YES! 10TH ANNIVERSARY EDITION",
@@ -981,7 +1112,8 @@
         "pages": 288,
         "reviews": 119,
         "link": "https://www.amazon.in/dp/1781257426/?coliid=I19GRCUBPZ64UM&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.3506944444444444
+        "value_per_page": 1.3506944444444444,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Communication Skills: A Practical Guide to Improving Your Social Intelligence, Presentation, Persuasion and Public Speaking: 9 (Positive Psychology Coaching)",
@@ -989,7 +1121,8 @@
         "pages": 158,
         "reviews": 1258,
         "link": "https://www.amazon.in/dp/1515031918/?coliid=IOO8T05DT17Z1&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 5.89873417721519
+        "value_per_page": 5.89873417721519,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "VERBAL JUDO 2E PB",
@@ -997,7 +1130,8 @@
         "pages": 224,
         "reviews": 4238,
         "link": "https://www.amazon.in/dp/0062107704/?coliid=I2UX7882U2LCOA&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.732142857142857
+        "value_per_page": 3.732142857142857,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Pre-Suasion: A Revolutionary Way to Influence and Persuade",
@@ -1005,7 +1139,8 @@
         "pages": 432,
         "reviews": 3262,
         "link": "https://www.amazon.in/dp/1847941435/?coliid=I2Y86JC0AOXYH5&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.0671296296296295
+        "value_per_page": 1.0671296296296295,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "WAY OF THE WOLF: Straight Line Selling - Master the Art of Persuasion, Influence, and Success",
@@ -1013,7 +1148,8 @@
         "pages": 256,
         "reviews": 8217,
         "link": "https://www.amazon.in/dp/1473674816/?coliid=I30H90W5WDXHIQ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.4765625
+        "value_per_page": 1.4765625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Sell or Be Sold: How to Get Your Way in Business and in Life",
@@ -1021,7 +1157,8 @@
         "pages": 200,
         "reviews": 3724,
         "link": "https://www.amazon.in/dp/1608322564/?coliid=I2O4WBSDCMV3AN&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 9.65835
+        "value_per_page": 9.65835,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Peoplewatching: The Desmond Morris Guide to Body Language",
@@ -1029,7 +1166,8 @@
         "pages": 544,
         "reviews": 370,
         "link": "https://www.amazon.in/dp/0099429780/?coliid=I3G1BEPQ34WUMS&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.375
+        "value_per_page": 1.375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How To Sell Anything To Anybody",
@@ -1037,7 +1175,8 @@
         "pages": 192,
         "reviews": 1141,
         "link": "https://www.amazon.in/dp/0743273966/?coliid=I11XN5B2SGJU2X&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.5625
+        "value_per_page": 1.5625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Don't Sell Make them Buy : Upgrade Your Selling Skills",
@@ -1045,7 +1184,8 @@
         "pages": 184,
         "reviews": 374,
         "link": "https://www.amazon.in/dp/9392834713/?coliid=I2UERGL9X6RBAK&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1521739130434783
+        "value_per_page": 1.1521739130434783,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Cues: Master the Secret Language of Charismatic Communication [Paperback] Van Edwards, Vanessa",
@@ -1053,15 +1193,17 @@
         "pages": 320,
         "reviews": 1318,
         "link": "https://www.amazon.in/dp/0241554934/?coliid=I211EPKTQHT56A&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.209375
+        "value_per_page": 2.209375,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Art Of Persuasion",
         "price": 253.0,
         "pages": 238,
-        "reviews": 1094,
+        "reviews": 1095,
         "link": "https://www.amazon.in/dp/9381860289/?coliid=I1ANYKZWX1QA49&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.0630252100840336
+        "value_per_page": 1.0630252100840336,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Like Switch",
@@ -1069,15 +1211,17 @@
         "pages": 288,
         "reviews": 1632,
         "link": "https://www.amazon.in/dp/1476754489/?coliid=I39BFIL6B00XFU&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 6.072916666666667
+        "value_per_page": 6.072916666666667,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Captivate",
         "price": 649.0,
         "pages": 320,
-        "reviews": 3274,
+        "reviews": 3275,
         "link": "https://www.amazon.in/dp/024130993X/?coliid=I15GKED1M43KMA&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.028125
+        "value_per_page": 2.028125,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Influence is Your Superpower",
@@ -1085,7 +1229,8 @@
         "pages": 304,
         "reviews": 513,
         "link": "https://www.amazon.in/dp/1785042386/?coliid=I3MWYMCH84R99B&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.243421052631579
+        "value_per_page": 1.243421052631579,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Presence: Unlock your inner confidence to embrace life's biggest challenges",
@@ -1093,7 +1238,8 @@
         "pages": 320,
         "reviews": 3695,
         "link": "https://www.amazon.in/dp/1409156028/?coliid=I18AXWNE96VI9W&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.496875
+        "value_per_page": 1.496875,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "What's in it for Them?: 9 Genius Networking Principles to Get What You Want by Helping Others Get What They Want",
@@ -1101,7 +1247,8 @@
         "pages": 255,
         "reviews": 192,
         "link": "https://www.amazon.in/dp/1401975852/?coliid=I1VJ4NF5HYD6OD&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 5.564705882352941
+        "value_per_page": 5.564705882352941,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Never Eat Alone: And Other Secrets to Success, One Relationship at a Time [Paperback] Keith Ferrazzi and Tahl Raz",
@@ -1109,15 +1256,17 @@
         "pages": 400,
         "reviews": 1268,
         "link": "https://www.amazon.in/dp/0241004950/?coliid=I1Q0IJ7RMIH6U3&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1775
+        "value_per_page": 1.1775,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Understanding Body Language: How to Decode Nonverbal Communication in Life, Love, and Work",
-        "price": 234.0,
+        "price": 217.0,
         "pages": 160,
-        "reviews": 1448,
+        "reviews": 1449,
         "link": "https://www.amazon.in/dp/938999568X/?coliid=I31QE7APQYC1VJ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.4625
+        "value_per_page": 1.35625,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Coaching Habit: Say Less, Ask More & Change the Way You Lead Forever",
@@ -1125,23 +1274,26 @@
         "pages": 244,
         "reviews": 356,
         "link": "https://www.amazon.in/dp/1989603610/?coliid=I2JJHKLKHHY4EE&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.2622950819672132
+        "value_per_page": 1.2622950819672132,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Exactly What to Say",
         "price": 236.0,
         "pages": 148,
-        "reviews": 5820,
+        "reviews": 5824,
         "link": "https://www.amazon.in/dp/198960367X/?coliid=I1YVLY6LLCHXTK&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.5945945945945945
+        "value_per_page": 1.5945945945945945,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Think Faster, Talk Smarter",
         "price": 639.0,
         "pages": 352,
-        "reviews": 741,
+        "reviews": 743,
         "link": "https://www.amazon.in/dp/1035024969/?coliid=I2Z5IQ7WTDPBE&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.8153409090909092
+        "value_per_page": 1.8153409090909092,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The First Minute: How to start conversations that get results (Business Communication Skills)",
@@ -1149,7 +1301,8 @@
         "pages": 126,
         "reviews": 99,
         "link": "https://www.amazon.in/dp/8119373510/?coliid=I2DV69X7SL6YNJ&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.3412698412698412
+        "value_per_page": 1.3412698412698412,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Listen Like You Mean It",
@@ -1157,7 +1310,8 @@
         "pages": 336,
         "reviews": 133,
         "link": "https://www.amazon.in/dp/1529074010/?coliid=IWX2WL1SY2O61&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.3541666666666667
+        "value_per_page": 1.3541666666666667,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Rejection Proof: How to Beat Fear and Become Invincible",
@@ -1165,7 +1319,8 @@
         "pages": 240,
         "reviews": 2024,
         "link": "https://www.amazon.in/dp/1847941451/?coliid=I36ZDFSGPUP0TI&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.7291666666666667
+        "value_per_page": 1.7291666666666667,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "MAKE YOURSELF UNFORGETTABLE",
@@ -1173,7 +1328,8 @@
         "pages": 240,
         "reviews": 652,
         "link": "https://www.amazon.in/dp/0857206796/?coliid=I3RDYXNLSEHY1W&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1083333333333334
+        "value_per_page": 1.1083333333333334,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "THE FINE ART OF SMALL TALK: HOW TO START A CONVERSATION, KEEP IT GOING, BUILD NETWORKING SKILLS – AN",
@@ -1181,7 +1337,8 @@
         "pages": 272,
         "reviews": 458,
         "link": "https://www.amazon.in/dp/0349436177/?coliid=I2AD3ZWRMOAHAH&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.588235294117647
+        "value_per_page": 1.588235294117647,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How to Instantly Connect With Anyone",
@@ -1189,7 +1346,8 @@
         "pages": 336,
         "reviews": 205,
         "link": "https://www.amazon.in/dp/009193544X/?coliid=I1VA7JX46WENFX&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 3.472886904761905
+        "value_per_page": 3.472886904761905,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Doesn't Hurt to Ask: Using the Power of Questions to Communicate, Connect, and Persuade",
@@ -1197,7 +1355,8 @@
         "pages": 288,
         "reviews": 5059,
         "link": "https://www.amazon.in/dp/0593138910/?coliid=I1DP0A4AG1AVZ4&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 5.774305555555555
+        "value_per_page": 5.774305555555555,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "WORDS THAT WORK: IT'S NOT WHAT YOU SAY, IT'S WHAT PEOPLE HEAR / LUNTZ, FRANK I.",
@@ -1205,7 +1364,8 @@
         "pages": 368,
         "reviews": 781,
         "link": "https://www.amazon.in/dp/1401309291/?coliid=I3DGC4WX6TOT8U&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.6440217391304346
+        "value_per_page": 2.6440217391304346,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Difficult Conversations : How to Discuss",
@@ -1213,7 +1373,8 @@
         "pages": 352,
         "reviews": 3846,
         "link": "https://www.amazon.in/dp/0143118447/?coliid=I1FTNJFSGGLY2G&colid=1YZ6P9CMSTI9C&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "The Only Negotiating Guide You'll Ever Need, Revised and Updated: 101 Ways to Win Every Time in Any Situation",
@@ -1221,7 +1382,8 @@
         "pages": 304,
         "reviews": 137,
         "link": "https://www.amazon.in/dp/1524758906/?coliid=IV41QKW8ZA5P2&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 5.4868421052631575
+        "value_per_page": 5.4868421052631575,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "How to Listen",
@@ -1229,7 +1391,8 @@
         "pages": 288,
         "reviews": 177,
         "link": "https://www.amazon.in/dp/1774581914/?coliid=I1X01XR4QYNR69&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.1354166666666667
+        "value_per_page": 1.1354166666666667,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Bargaining for Advantage : Negotiation",
@@ -1237,7 +1400,8 @@
         "pages": 304,
         "reviews": 821,
         "link": "https://www.amazon.in/dp/0143036971/?coliid=I23XSGQRMQTX8O&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.151315789473684
+        "value_per_page": 2.151315789473684,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Sell or Be Sold: How to Get Your Way in Business and in Life",
@@ -1245,7 +1409,8 @@
         "pages": 200,
         "reviews": 3724,
         "link": "https://www.amazon.in/dp/B0B2N33XVP/?coliid=I3SX8WMKM3TSBL&colid=1YZ6P9CMSTI9C&psc=0&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": null
+        "value_per_page": null,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Art of Negotiation",
@@ -1253,7 +1418,8 @@
         "pages": 294,
         "reviews": 279,
         "link": "https://www.amazon.in/dp/1912615126/?coliid=I30RDTMM499F1V&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 2.748299319727891
+        "value_per_page": 2.748299319727891,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "NEGOTIATION: The Brian Tracy Success Library",
@@ -1261,7 +1427,8 @@
         "pages": 112,
         "reviews": 357,
         "link": "https://www.amazon.in/dp/9387383075/?coliid=I1BASCNXKU4F31&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.8303571428571428
+        "value_per_page": 1.8303571428571428,
+        "wishlist_name": "Business Books"
     },
     {
         "title": "Sales Success: The Brian Tracy Success Library (English)",
@@ -1269,30 +1436,7 @@
         "pages": 128,
         "reviews": 204,
         "link": "https://www.amazon.in/dp/9387383105/?coliid=I3RX5I9DRJSPBC&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.703125
-    },
-    {
-        "title": "Leadership and Management Strategy Collection - The Prince, The Art of War, and Arthashastra – English | Best Classic Books collection to Learn Economics/ Leadership / Political Management Strategy | Reference Guide for Philosophy/Financial/ Warfare Tactics",
-        "price": 399.0,
-        "pages": 784,
-        "reviews": 71,
-        "link": "https://www.amazon.in/dp/9354409075/?coliid=I2V1J2AWYPY24K&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 0.5089285714285714
-    },
-    {
-        "title": "Psychological Warfare and Deception: What You Need to Know about Human Behavior, Dark Psychology, Propaganda, Negotiation, Manipulation, and Persuasion",
-        "price": 1379.0,
-        "pages": 222,
-        "reviews": 37,
-        "link": "https://www.amazon.in/dp/1954029160/?coliid=I51GY6RZ1GA2V&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 6.211711711711712
-    },
-    {
-        "title": "Read People Like a Book: How to Analyze, Understand, and Predict People’s Emotions, Thoughts, Intentions, and Behaviors",
-        "price": 289.0,
-        "pages": 176,
-        "reviews": 6112,
-        "link": "https://www.amazon.in/dp/B0C23SF7NQ/?coliid=I5Z5N3F4AMQGL&colid=1YZ6P9CMSTI9C&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-        "value_per_page": 1.6420454545454546
+        "value_per_page": 1.703125,
+        "wishlist_name": "Business Books"
     }
 ]
