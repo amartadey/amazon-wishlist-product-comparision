@@ -1,0 +1,17 @@
+{
+    "wishlists": [
+        {
+            "name": "Business Books",
+            "url": "https://www.amazon.in/hz/wishlist/ls/1YZ6P9CMSTI9C?ref_=wl_share"
+        },
+        {
+            "name": "Papa",
+            "url": "https://www.amazon.in/hz/wishlist/ls/2L0TRQKO0Y6SG?ref_=wl_share"
+        }
+    ],
+    "schedule": {
+        "enabled": false,
+        "time": "02:00",
+        "frequency": "daily"
+    }
+}

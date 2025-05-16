@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Books Finder</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconify Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.2.1/iconify.min.js"></script>
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="py-4">
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h1 class="site-heading">
+            <span class="iconify" data-icon="mdi:book-open-page-variant" data-width="42"></span>
+            Amazon Books Finder
+          </h1>
+          <p class="lead">Find your next great read at the best value</p>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex justify-content-md-end">
+            <div class="stats">
+              <div><span id="book-count">0</span> books found</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-container mb-4">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <span class="iconify" data-icon="mdi:filter-variant" data-width="24"></span>
+          Search & Filter Options
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="search" class="form-label">Search by Title</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <span class="iconify" data-icon="mdi:magnify" data-width="20"></span>
+                </span>
+                <input type="text" class="form-control" id="search" placeholder="Enter book title...">
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <label for="min-price" class="form-label">Min Price (₹)</label>
+              <input type="number" class="form-control" id="min-price" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="max-price" class="form-label">Max Price (₹)</label>
+              <input type="number" class="form-control" id="max-price" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="min-pages" class="form-label">Min Pages</label>
+              <input type="number" class="form-control" id="min-pages" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="max-pages" class="form-label">Max Pages</label>
+              <input type="number" class="form-control" id="max-pages" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="min-reviews" class="form-label">Min Reviews</label>
+              <input type="number" class="form-control" id="min-reviews" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="sort-by" class="form-label">Sort By</label>
+              <select class="form-select" id="sort-by">
+                <option value="title">Title</option>
+                <option value="price-low">Price (Low to High)</option>
+                <option value="price-high">Price (High to Low)</option>
+                <option value="pages">Pages (Low to High)</option>
+                <option value="reviews">Most Reviews</option>
+                <option value="value">Best Value (₹/Page)</option>
+              </select>
+            </div>
+            
+            <div class="col-12">
+              <div class="d-flex justify-content-between">
+                <button id="filter-btn" class="btn btn-primary">
+                  <span class="iconify" data-icon="mdi:filter" data-width="20"></span> Apply Filters
+                </button>
+                <button id="reset-btn" class="btn btn-outline-secondary">
+                  <span class="iconify" data-icon="mdi:refresh" data-width="20"></span> Reset Filters
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="books-container">
+      <!-- Books will be loaded here via JavaScript -->
+      <div class="col-12 text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2">Loading books...</p>
+      </div>
+    </div>
+    
+    <div id="no-results" class="alert alert-warning text-center d-none">
+      <span class="iconify" data-icon="mdi:alert-circle-outline" data-width="24"></span>
+      No books match your search criteria. Please try different filters.
+    </div>
+  </div>
+
+  <footer class="mt-5 py-3 bg-light text-center">
+    <div class="container">
+      <p class="mb-0">Amazon Books Finder &copy; 2025 | Discover your next read</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

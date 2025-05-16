@@ -34,6 +34,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install required packages
 pip install selenium
 pip install keyboard
+pip install schedule
 ```
 
 ## Additional Requirements

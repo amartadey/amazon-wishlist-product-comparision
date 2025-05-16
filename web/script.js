@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card h-100 book-card">
           <div class="card-header">
-            <h5 class="card-title text-truncate" title="${book.title}">
+            <h5 class="card-title" title="${book.title}">
               ${book.title}
             </h5>
           </div>
