@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetch book data from JSON file
   async function fetchBooks() {
     try {
-      const response = await fetch('amazon_books.json');
+      const response = await fetch('all_wishlists.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
