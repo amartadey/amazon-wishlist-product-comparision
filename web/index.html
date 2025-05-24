@@ -69,6 +69,10 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 0.75rem 1rem;
+}
+.search-container .card-body {
+  padding: 1rem;
 }
 .book-card .card-header {
   height: 80px;
@@ -176,6 +180,18 @@ footer {
   align-items: center;
   margin-bottom: 15px;
 }
+.form-control, .form-select {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+}
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.compact-filters .row {
+  row-gap: 0.75rem;
+}
 @media (max-width: 768px) {
   .site-heading {
     font-size: 1.5rem;
@@ -197,6 +213,15 @@ footer {
 }
 .spinner-border {
   color: var(--primary-color) !important;
+}
+.wishlist-badge {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
 }
   </style>
 </head>
@@ -224,68 +249,66 @@ footer {
       </div>
     </header>
 
-    <div class="search-container mb-4">
+    <div class="search-container mb-3">
       <div class="card">
         <div class="card-header bg-primary text-white">
-          <span class="iconify" data-icon="mdi:filter-variant" data-width="24"></span>
+          <span class="iconify" data-icon="mdi:filter-variant" data-width="20"></span>
           Search & Filter Options
         </div>
-        <div class="card-body">
-          <div class="row g-3">
-            <div class="col-md-6">
+        <div class="card-body compact-filters">
+          <div class="row g-2">
+            <div class="col-md-4">
               <label for="search" class="form-label">Search by Title</label>
-              <div class="input-group">
+              <div class="input-group input-group-sm">
                 <span class="input-group-text">
-                  <span class="iconify" data-icon="mdi:magnify" data-width="20"></span>
+                  <span class="iconify" data-icon="mdi:magnify" data-width="16"></span>
                 </span>
                 <input type="text" class="form-control" id="search" placeholder="Enter book title...">
               </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-md-4">
+              <label for="wishlist-filter" class="form-label">Wishlist</label>
+              <select class="form-select form-select-sm" id="wishlist-filter">
+                <option value="">All Wishlists</option>
+              </select>
+            </div>
+            
+            <div class="col-md-4">
               <label for="format-filter" class="form-label">Format</label>
-              <select class="form-select" id="format-filter">
+              <select class="form-select form-select-sm" id="format-filter">
                 <option value="">All Formats</option>
               </select>
             </div>
             
             <div class="col-md-3">
-              <div class="form-check mt-4">
-                <input class="form-check-input" type="checkbox" id="customers-keep-filter">
-                <label class="form-check-label" for="customers-keep-filter">
-                  Customers Keep Item Only
-                </label>
-              </div>
-            </div>
-            
-            <div class="col-md-3">
               <label for="min-price" class="form-label">Min Price (₹)</label>
-              <input type="number" class="form-control" id="min-price" min="0">
+              <input type="number" class="form-control form-control-sm" id="min-price" min="0">
             </div>
             
             <div class="col-md-3">
               <label for="max-price" class="form-label">Max Price (₹)</label>
-              <input type="number" class="form-control" id="max-price" min="0">
+              <input type="number" class="form-control form-control-sm" id="max-price" min="0">
             </div>
             
             <div class="col-md-3">
               <label for="min-pages" class="form-label">Min Pages</label>
-              <input type="number" class="form-control" id="min-pages" min="0">
+              <input type="number" class="form-control form-control-sm" id="min-pages" min="0">
             </div>
             
             <div class="col-md-3">
               <label for="max-pages" class="form-label">Max Pages</label>
-              <input type="number" class="form-control" id="max-pages" min="0">
+              <input type="number" class="form-control form-control-sm" id="max-pages" min="0">
             </div>
             
             <div class="col-md-3">
               <label for="min-reviews" class="form-label">Min Reviews</label>
-              <input type="number" class="form-control" id="min-reviews" min="0">
+              <input type="number" class="form-control form-control-sm" id="min-reviews" min="0">
             </div>
             
             <div class="col-md-3">
               <label for="sort-by" class="form-label">Sort By</label>
-              <select class="form-select" id="sort-by">
+              <select class="form-select form-select-sm" id="sort-by">
                 <option value="title">Title</option>
                 <option value="price-low">Price (Low to High)</option>
                 <option value="price-high">Price (High to Low)</option>
@@ -295,13 +318,22 @@ footer {
               </select>
             </div>
             
-            <div class="col-12">
-              <div class="d-flex justify-content-between">
-                <button id="filter-btn" class="btn btn-primary">
-                  <span class="iconify" data-icon="mdi:filter" data-width="20"></span> Apply Filters
+            <div class="col-md-3">
+              <div class="form-check mt-4">
+                <input class="form-check-input" type="checkbox" id="customers-keep-filter">
+                <label class="form-check-label" for="customers-keep-filter">
+                  Customers Keep Only
+                </label>
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="d-flex gap-2 mt-4">
+                <button id="filter-btn" class="btn btn-primary btn-sm">
+                  <span class="iconify" data-icon="mdi:filter" data-width="16"></span> Apply
                 </button>
-                <button id="reset-btn" class="btn btn-outline-secondary">
-                  <span class="iconify" data-icon="mdi:refresh" data-width="20"></span> Reset Filters
+                <button id="reset-btn" class="btn btn-outline-secondary btn-sm">
+                  <span class="iconify" data-icon="mdi:refresh" data-width="16"></span> Reset
                 </button>
               </div>
             </div>
@@ -354,6 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectedCount = document.getElementById('selected-count');
   const noResults = document.getElementById('no-results');
   const searchInput = document.getElementById('search');
+  const wishlistFilter = document.getElementById('wishlist-filter');
   const formatFilter = document.getElementById('format-filter');
   const customersKeepFilter = document.getElementById('customers-keep-filter');
   const minPriceInput = document.getElementById('min-price');
@@ -378,6 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
       updateBookCount(filteredBooks.length);
       populateFilterRanges();
       populateFormatFilter();
+      populateWishlistFilter();
     } catch (error) {
       console.error('Error fetching book data:', error);
       booksContainer.innerHTML = `
@@ -409,6 +443,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const formats = [...new Set(booksData.map(book => book.format).filter(f => f))];
     formatFilter.innerHTML = '<option value="">All Formats</option>' + 
       formats.map(format => `<option value="${format}">${format}</option>`).join('');
+  }
+
+  function populateWishlistFilter() {
+    const wishlists = [...new Set(booksData.map(book => book.wishlist_name).filter(w => w))];
+    wishlistFilter.innerHTML = '<option value="">All Wishlists</option>' + 
+      wishlists.map(wishlist => `<option value="${wishlist}">${wishlist}</option>`).join('');
   }
   
   function displayBooks(books) {
@@ -462,6 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </h5>
           </div>
           <div class="card-body">
+            ${book.wishlist_name ? `<div class="wishlist-badge">${book.wishlist_name}</div>` : ''}
             <div class="book-details">
               <div class="detail-item">
                 <span class="iconify" data-icon="mdi:currency-inr" data-width="18"></span>
@@ -537,6 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function applyFilters() {
     const searchTerm = searchInput.value.toLowerCase().trim();
+    const selectedWishlist = wishlistFilter.value;
     const selectedFormat = formatFilter.value;
     const customersKeepOnly = customersKeepFilter.checked;
     const minPrice = minPriceInput.value ? parseFloat(minPriceInput.value) : null;
@@ -547,6 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     filteredBooks = booksData.filter(book => {
       if (searchTerm && (!book.title || !book.title.toLowerCase().includes(searchTerm))) return false;
+      if (selectedWishlist && book.wishlist_name !== selectedWishlist) return false;
       if (selectedFormat && book.format !== selectedFormat) return false;
       if (customersKeepOnly && !book.customers_keep_item) return false;
       if (minPrice !== null && (book.price === null || book.price < minPrice)) return false;
@@ -613,6 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function resetFilters() {
     searchInput.value = '';
+    wishlistFilter.value = '';
     formatFilter.value = '';
     customersKeepFilter.checked = false;
     minPriceInput.value = '';
@@ -658,6 +702,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const debouncedFilter = debounce(applyFilters, 300);
   
   searchInput.addEventListener('input', debouncedFilter);
+  wishlistFilter.addEventListener('change', debouncedFilter);
   formatFilter.addEventListener('change', debouncedFilter);
   customersKeepFilter.addEventListener('change', debouncedFilter);
   minPriceInput.addEventListener('input', debouncedFilter);
