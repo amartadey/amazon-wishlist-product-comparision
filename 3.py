@@ -402,6 +402,7 @@ def load_config():
     default = {
         "wishlists": [
             {"name": "Business Books", "url": "https://www.amazon.in/hz/wishlist/ls/1YZ6P9CMSTI9C?ref_=wl_share"},
+            {"name": "General Books", "url": "https://www.amazon.in/hz/wishlist/ls/1VY69P3F07HC8?ref_=wl_share"},
             {"name": "IT Books", "url": "https://www.amazon.in/hz/wishlist/ls/OPIB1KQBJDHR?ref_=wl_share"}
         ],
         "schedule": {"enabled": False, "time": "02:00", "frequency": "daily"},
