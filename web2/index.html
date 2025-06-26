@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Books Finder</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.2.1/iconify.min.js"></script>
+  <style>
+:root {
+  --primary-color: #ff9900;
+  --secondary-color: #232f3e;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #343a40;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+.site-heading {
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lead {
+  color: var(--dark-gray);
+  opacity: 0.8;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: #e68a00;
+  border-color: #e68a00;
+}
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.card.selected {
+  border: 2px solid var(--primary-color);
+  transform: translateY(-3px);
+}
+.card-header {
+  background-color: var(--medium-gray);
+  border-bottom: 2px solid var(--primary-color);
+}
+.search-container .card-header {
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1rem;
+}
+.search-container .card-body {
+  padding: 1rem;
+}
+.book-card .card-header {
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+}
+.book-card .card-title {
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.book-card .card-title:first-line {
+  padding-left: 20px; 
+}
+.book-card .card-body {
+  padding: 1rem;
+}
+.book-card .card-footer {
+  background-color: white;
+  border-top: 1px solid var(--medium-gray);
+  padding: 0.75rem;
+}
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.detail-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+.detail-value {
+  margin-left: auto;
+}
+.text-success .iconify {
+  color: var(--success-color);
+}
+.text-warning .iconify {
+  color: var(--warning-color);
+}
+.text-danger .iconify {
+  color: var(--danger-color);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
+}
+.input-group-text {
+  background-color: var(--medium-gray);
+}
+.stats {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+}
+#book-count {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.total-price {
+  background-color: var(--success-color);
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+footer {
+  background-color: var(--secondary-color) !important;
+  color: white;
+}
+.keep-item-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--success-color);
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.book-select {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.selection-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.form-control, .form-select {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+}
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.compact-filters .row {
+  row-gap: 0.75rem;
+}
+@media (max-width: 768px) {
+  .site-heading {
+    font-size: 1.5rem;
+  }
+  .stats, .total-price {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .book-card .card-header {
+    height: auto;
+  }
+}
+#no-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+}
+.spinner-border {
+  color: var(--primary-color) !important;
+}
+.wishlist-badge {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="py-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="site-heading">
+            <span class="iconify" data-icon="mdi:book-open-page-variant" data-width="42"></span>
+            Amazon Books Finder
+          </h1>
+          <p class="lead">Find your next great read at the best value</p>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex justify-content-md-end flex-wrap">
+            <div class="stats">
+              <div><span id="book-count">0</span> books found</div>
+            </div>
+            <div class="total-price">
+              <div>Total: ₹<span id="total-price">0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-container mb-3">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <span class="iconify" data-icon="mdi:filter-variant" data-width="20"></span>
+          Search & Filter Options
+        </div>
+        <div class="card-body compact-filters">
+          <div class="row g-2">
+            <div class="col-md-4">
+              <label for="search" class="form-label">Search by Title</label>
+              <div class="input-group input-group-sm">
+                <span class="input-group-text">
+                  <span class="iconify" data-icon="mdi:magnify" data-width="16"></span>
+                </span>
+                <input type="text" class="form-control" id="search" placeholder="Enter book title...">
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <label for="wishlist-filter" class="form-label">Wishlist</label>
+              <select class="form-select form-select-sm" id="wishlist-filter">
+                <option value="">All Wishlists</option>
+              </select>
+            </div>
+            
+            <div class="col-md-4">
+              <label for="format-filter" class="form-label">Format</label>
+              <select class="form-select form-select-sm" id="format-filter">
+                <option value="">All Formats</option>
+              </select>
+            </div>
+            
+            <div class="col-md-3">
+              <label for="min-price" class="form-label">Min Price (₹)</label>
+              <input type="number" class="form-control form-control-sm" id="min-price" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="max-price" class="form-label">Max Price (₹)</label>
+              <input type="number" class="form-control form-control-sm" id="max-price" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="min-pages" class="form-label">Min Pages</label>
+              <input type="number" class="form-control form-control-sm" id="min-pages" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="max-pages" class="form-label">Max Pages</label>
+              <input type="number" class="form-control form-control-sm" id="max-pages" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="min-reviews" class="form-label">Min Reviews</label>
+              <input type="number" class="form-control form-control-sm" id="min-reviews" min="0">
+            </div>
+            
+            <div class="col-md-3">
+              <label for="sort-by" class="form-label">Sort By</label>
+              <select class="form-select form-select-sm" id="sort-by">
+                <option value="title">Title</option>
+                <option value="price-low">Price (Low to High)</option>
+                <option value="price-high">Price (High to Low)</option>
+                <option value="pages">Pages (Low to High)</option>
+                <option value="reviews">Most Reviews</option>
+                <option value="value">Best Value (₹/Page)</option>
+              </select>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="form-check mt-4">
+                <input class="form-check-input" type="checkbox" id="customers-keep-filter">
+                <label class="form-check-label" for="customers-keep-filter">
+                  Customers Keep Only
+                </label>
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="d-flex gap-2 mt-4">
+                <button id="filter-btn" class="btn btn-primary btn-sm">
+                  <span class="iconify" data-icon="mdi:filter" data-width="16"></span> Apply
+                </button>
+                <button id="reset-btn" class="btn btn-outline-secondary btn-sm">
+                  <span class="iconify" data-icon="mdi:refresh" data-width="16"></span> Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="selection-controls">
+      <button id="select-all-btn" class="btn btn-success btn-sm">
+        <span class="iconify" data-icon="mdi:select-all" data-width="16"></span> Select All
+      </button>
+      <button id="deselect-all-btn" class="btn btn-outline-secondary btn-sm">
+        <span class="iconify" data-icon="mdi:select-off" data-width="16"></span> Deselect All
+      </button>
+      <span class="text-muted">Selected: <span id="selected-count">0</span> items</span>
+    </div>
+
+    <div class="row" id="books-container">
+      <div class="col-12 text-center py-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="mt-2">Loading books...</p>
+      </div>
+    </div>
+    
+    <div id="no-results" class="alert alert-warning text-center d-none">
+      <span class="iconify" data-icon="mdi:alert-circle-outline" data-width="24"></span>
+      No books match your search criteria. Please try different filters.
+    </div>
+  </div>
+
+  <footer class="mt-5 py-3 bg-light text-center">
+    <div class="container">
+      <p class="mb-0">Amazon Books Finder &copy; 2025 | Discover your next read</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  let booksData = [];
+  let filteredBooks = [];
+  let selectedBooks = new Set();
+  
+  const booksContainer = document.getElementById('books-container');
+  const bookCount = document.getElementById('book-count');
+  const totalPrice = document.getElementById('total-price');
+  const selectedCount = document.getElementById('selected-count');
+  const noResults = document.getElementById('no-results');
+  const searchInput = document.getElementById('search');
+  const wishlistFilter = document.getElementById('wishlist-filter');
+  const formatFilter = document.getElementById('format-filter');
+  const customersKeepFilter = document.getElementById('customers-keep-filter');
+  const minPriceInput = document.getElementById('min-price');
+  const maxPriceInput = document.getElementById('max-price');
+  const minPagesInput = document.getElementById('min-pages');
+  const maxPagesInput = document.getElementById('max-pages');
+  const minReviewsInput = document.getElementById('min-reviews');
+  const sortBySelect = document.getElementById('sort-by');
+  const filterBtn = document.getElementById('filter-btn');
+  const resetBtn = document.getElementById('reset-btn');
+  const selectAllBtn = document.getElementById('select-all-btn');
+  const deselectAllBtn = document.getElementById('deselect-all-btn');
+
+  async function fetchBooks() {
+    try {
+      const response = await fetch('all_wishlists.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      booksData = await response.json();
+      
+      filteredBooks = [...booksData];
+      displayBooks(filteredBooks);
+      updateBookCount(filteredBooks.length);
+      populateFilterRanges();
+      populateFormatFilter();
+      populateWishlistFilter();
+    } catch (error) {
+      console.error('Error fetching book data:', error);
+      booksContainer.innerHTML = `
+        <div class="col-12">
+          <div class="alert alert-danger">
+            <span class="iconify" data-icon="mdi:alert-circle" data-width="24"></span>
+            Failed to load books data. Please try refreshing the page.
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  function populateFilterRanges() {
+    if (booksData.length === 0) return;
+    
+    const prices = booksData.filter(book => book.price !== null).map(book => book.price);
+    const pages = booksData.filter(book => book.pages !== null).map(book => book.pages);
+    const reviews = booksData.filter(book => book.reviews !== null).map(book => book.reviews);
+    
+    minPriceInput.placeholder = Math.min(...prices) || 0;
+    maxPriceInput.placeholder = Math.max(...prices) || 0;
+    minPagesInput.placeholder = Math.min(...pages) || 0;
+    maxPagesInput.placeholder = Math.max(...pages) || 0;
+    minReviewsInput.placeholder = Math.min(...reviews) || 0;
+  }
+
+  function populateFormatFilter() {
+    const formats = [...new Set(booksData.map(book => book.format).filter(f => f))];
+    formatFilter.innerHTML = '<option value="">All Formats</option>' + 
+      formats.map(format => `<option value="${format}">${format}</option>`).join('');
+  }
+
+  function populateWishlistFilter() {
+    const wishlists = [...new Set(booksData.map(book => book.wishlist_name).filter(w => w))];
+    wishlistFilter.innerHTML = '<option value="">All Wishlists</option>' + 
+      wishlists.map(wishlist => `<option value="${wishlist}">${wishlist}</option>`).join('');
+  }
+  
+  function displayBooks(books) {
+    if (books.length === 0) {
+      booksContainer.innerHTML = '';
+      noResults.classList.remove('d-none');
+      return;
+    }
+    
+    noResults.classList.add('d-none');
+    booksContainer.innerHTML = books.map(book => createBookCard(book)).join('');
+    
+    document.querySelectorAll('.book-select').forEach(checkbox => {
+      checkbox.addEventListener('change', updateSelection);
+    });
+  }
+  
+  function createBookCard(book) {
+    const valueFormatted = book.value_per_page !== null ? 
+                          `₹${book.value_per_page.toFixed(2)} per page` : 
+                          'N/A';
+    
+    let valueRatingClass = 'text-muted';
+    let valueIcon = 'mdi:minus';
+    
+    if (book.value_per_page !== null) {
+      if (book.value_per_page < 0.8) {
+        valueRatingClass = 'text-success';
+        valueIcon = 'mdi:thumb-up';
+      } else if (book.value_per_page < 1) {
+        valueRatingClass = 'text-warning';
+        valueIcon = 'mdi:hand-okay';
+      } else {
+        valueRatingClass = 'text-danger';
+        valueIcon = 'mdi:thumb-down';
+      }
+    }
+    
+    const isSelected = selectedBooks.has(book.title);
+    
+    return `
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 book-card ${isSelected ? 'selected' : ''}" data-title="${book.title}">
+          <div class="card-header">
+            <input type="checkbox" class="form-check-input book-select" 
+                   data-title="${book.title}" ${isSelected ? 'checked' : ''}>
+            ${book.customers_keep_item ? 
+              '<div class="keep-item-badge"><span class="iconify" data-icon="mdi:check" data-width="14"></span></div>' : ''}
+            <h5 class="card-title" title="${book.title}">
+              &nbsp;&nbsp;&nbsp;${book.title}
+            </h5>
+          </div>
+          <div class="card-body">
+            ${book.wishlist_name ? `<div class="wishlist-badge">${book.wishlist_name}</div>` : ''}
+            <div class="book-details">
+              <div class="detail-item">
+                <span class="iconify" data-icon="mdi:currency-inr" data-width="18"></span>
+                <span class="detail-label">Price:</span>
+                <span class="detail-value">${book.price !== null ? `₹${book.price}` : 'N/A'}</span>
+              </div>
+              
+              <div class="detail-item">
+                <span class="iconify" data-icon="mdi:book-open-page-variant" data-width="18"></span>
+                <span class="detail-label">Pages:</span>
+                <span class="detail-value">${book.pages !== null ? book.pages : 'N/A'}</span>
+              </div>
+              
+              <div class="detail-item">
+                <span class="iconify" data-icon="mdi:book" data-width="18"></span>
+                <span class="detail-label">Format:</span>
+                <span class="detail-value">${book.format || 'N/A'}</span>
+              </div>
+              
+              <div class="detail-item">
+                <span class="iconify" data-icon="mdi:star" data-width="18"></span>
+                <span class="detail-label">Reviews:</span>
+                <span class="detail-value">${book.reviews !== null ? book.reviews.toLocaleString() : 'N/A'}</span>
+              </div>
+              
+              <div class="detail-item ${valueRatingClass}">
+                <span class="iconify" data-icon="${valueIcon}" data-width="18"></span>
+                <span class="detail-label">Value:</span>
+                <span class="detail-value">${valueFormatted}</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="${book.link}" class="btn btn-primary btn-sm w-100" target="_blank">
+              <span class="iconify" data-icon="mdi:shopping" data-width="20"></span>
+              View on Amazon
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  
+  function updateBookCount(count) {
+    bookCount.textContent = count;
+  }
+
+  function updateSelection() {
+    selectedBooks.clear();
+    document.querySelectorAll('.book-select:checked').forEach(checkbox => {
+      selectedBooks.add(checkbox.dataset.title);
+    });
+    
+    document.querySelectorAll('.book-card').forEach(card => {
+      const title = card.dataset.title;
+      if (selectedBooks.has(title)) {
+        card.classList.add('selected');
+      } else {
+        card.classList.remove('selected');
+      }
+    });
+    
+    updateTotalPrice();
+    selectedCount.textContent = selectedBooks.size;
+  }
+
+  function updateTotalPrice() {
+    const total = filteredBooks
+      .filter(book => selectedBooks.has(book.title) && book.price !== null)
+      .reduce((sum, book) => sum + book.price, 0);
+    totalPrice.textContent = total.toFixed(2);
+  }
+  
+  function applyFilters() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const selectedWishlist = wishlistFilter.value;
+    const selectedFormat = formatFilter.value;
+    const customersKeepOnly = customersKeepFilter.checked;
+    const minPrice = minPriceInput.value ? parseFloat(minPriceInput.value) : null;
+    const maxPrice = maxPriceInput.value ? parseFloat(maxPriceInput.value) : null;
+    const minPages = minPagesInput.value ? parseInt(minPagesInput.value) : null;
+    const maxPages = maxPagesInput.value ? parseInt(maxPagesInput.value) : null;
+    const minReviews = minReviewsInput.value ? parseInt(minReviewsInput.value) : null;
+    
+    filteredBooks = booksData.filter(book => {
+      if (searchTerm && (!book.title || !book.title.toLowerCase().includes(searchTerm))) return false;
+      if (selectedWishlist && book.wishlist_name !== selectedWishlist) return false;
+      if (selectedFormat && book.format !== selectedFormat) return false;
+      if (customersKeepOnly && !book.customers_keep_item) return false;
+      if (minPrice !== null && (book.price === null || book.price < minPrice)) return false;
+      if (maxPrice !== null && (book.price === null || book.price > maxPrice)) return false;
+      if (minPages !== null && (book.pages === null || book.pages < minPages)) return false;
+      if (maxPages !== null && (book.pages === null || book.pages > maxPages)) return false;
+      if (minReviews !== null && (book.reviews === null || book.reviews < minReviews)) return false;
+      return true;
+    });
+    
+    sortBooks();
+    displayBooks(filteredBooks);
+    updateBookCount(filteredBooks.length);
+  }
+  
+  function sortBooks() {
+    const sortBy = sortBySelect.value;
+    
+    switch (sortBy) {
+      case 'title':
+        filteredBooks.sort((a, b) => {
+          if (!a.title) return 1;
+          if (!b.title) return -1;
+          return a.title.localeCompare(b.title);
+        });
+        break;
+      case 'price-low':
+        filteredBooks.sort((a, b) => {
+          if (a.price === null) return 1;
+          if (b.price === null) return -1;
+          return a.price - b.price;
+        });
+        break;
+      case 'price-high':
+        filteredBooks.sort((a, b) => {
+          if (a.price === null) return 1;
+          if (b.price === null) return -1;
+          return b.price - a.price;
+        });
+        break;
+      case 'pages':
+        filteredBooks.sort((a, b) => {
+          if (a.pages === null) return 1;
+          if (b.pages === null) return -1;
+          return a.pages - b.pages;
+        });
+        break;
+      case 'reviews':
+        filteredBooks.sort((a, b) => {
+          if (a.reviews === null) return 1;
+          if (b.reviews === null) return -1;
+          return b.reviews - a.reviews;
+        });
+        break;
+      case 'value':
+        filteredBooks.sort((a, b) => {
+          if (a.value_per_page === null) return 1;
+          if (b.value_per_page === null) return -1;
+          return a.value_per_page - b.value_per_page;
+        });
+        break;
+    }
+  }
+  
+  function resetFilters() {
+    searchInput.value = '';
+    wishlistFilter.value = '';
+    formatFilter.value = '';
+    customersKeepFilter.checked = false;
+    minPriceInput.value = '';
+    maxPriceInput.value = '';
+    minPagesInput.value = '';
+    maxPagesInput.value = '';
+    minReviewsInput.value = '';
+    sortBySelect.value = 'title';
+    
+    filteredBooks = [...booksData];
+    displayBooks(filteredBooks);
+    updateBookCount(filteredBooks.length);
+  }
+
+  function selectAll() {
+    selectedBooks.clear();
+    filteredBooks.forEach(book => selectedBooks.add(book.title));
+    displayBooks(filteredBooks);
+  }
+
+  function deselectAll() {
+    selectedBooks.clear();
+    displayBooks(filteredBooks);
+  }
+  
+  filterBtn.addEventListener('click', applyFilters);
+  resetBtn.addEventListener('click', resetFilters);
+  selectAllBtn.addEventListener('click', selectAll);
+  deselectAllBtn.addEventListener('click', deselectAll);
+  
+  searchInput.addEventListener('keyup', (e) => {
+    if (e.key === 'Enter') applyFilters();
+  });
+  
+  function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
+  
+  const debouncedFilter = debounce(applyFilters, 300);
+  
+  searchInput.addEventListener('input', debouncedFilter);
+  wishlistFilter.addEventListener('change', debouncedFilter);
+  formatFilter.addEventListener('change', debouncedFilter);
+  customersKeepFilter.addEventListener('change', debouncedFilter);
+  minPriceInput.addEventListener('input', debouncedFilter);
+  maxPriceInput.addEventListener('input', debouncedFilter);
+  minPagesInput.addEventListener('input', debouncedFilter);
+  maxPagesInput.addEventListener('input', debouncedFilter);
+  minReviewsInput.addEventListener('input', debouncedFilter);
+  sortBySelect.addEventListener('change', debouncedFilter);
+  
+  fetchBooks();
+});
+  </script>
+</body>
+</html>
