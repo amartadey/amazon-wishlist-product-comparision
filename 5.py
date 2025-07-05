@@ -219,24 +219,58 @@ def extract_book_price_and_format(item):
     return price, item_format
 
 def save_results(books, wishlist_name):
+    """Saves scraped data to JSON and CSV, updates historical data, and a combined file."""
     if not books: return
+
+    # --- File Paths ---
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     wishlist_dir = os.path.join(OUTPUT_DIR, wishlist_name)
     os.makedirs(wishlist_dir, exist_ok=True)
     base_filename = os.path.join(wishlist_dir, f"{wishlist_name}_{timestamp}")
     
+    # --- 1. Save Current Scrape for the individual wishlist ---
     save_to_json(books, f"{base_filename}.json")
     save_to_csv(books, f"{base_filename}.csv")
 
+    # --- 2. Update Historical Data for the individual wishlist ---
     historical_path = os.path.join(wishlist_dir, "historical_data.json")
     all_time_data = []
     if os.path.exists(historical_path):
         with open(historical_path, "r", encoding="utf-8") as f:
-            all_time_data = json.load(f)
+            try:
+                all_time_data = json.load(f)
+            except json.JSONDecodeError:
+                print(f"Warning: Could not read historical data for {wishlist_name}. Starting fresh.")
+    
     all_time_data.extend(books)
     with open(historical_path, "w", encoding="utf-8") as f:
         json.dump(all_time_data, f, indent=4, ensure_ascii=False)
+    
     print(f"Updated historical data for '{wishlist_name}'.")
+
+    # --- 3. Update the Combined 'all_wishlists.json' File ---
+    combined_json_path = os.path.join(OUTPUT_DIR, "all_wishlists.json")
+    combined_books = []
+    if os.path.exists(combined_json_path):
+        with open(combined_json_path, "r", encoding="utf-8") as f:
+            try:
+                combined_books = json.load(f)
+            except json.JSONDecodeError:
+                print("Warning: Could not read combined wishlist file. A new one will be created.")
+
+    # Create a dictionary of existing books by their unique link for efficient checking
+    existing_links = {book['link']: book for book in combined_books}
+    
+    # Update existing entries and add new ones
+    for book in books:
+        existing_links[book['link']] = book # This will add new books or update existing ones
+
+    # Convert the dictionary back to a list for saving
+    updated_combined_list = list(existing_links.values())
+
+    save_to_json(updated_combined_list, combined_json_path)
+    print(f"✅ Updated combined 'all_wishlists.json' file with {len(updated_combined_list)} total unique items.")
+
 
 def save_to_csv(books, filename):
     if not books: return
