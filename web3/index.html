@@ -417,13 +417,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function populateFormatFilter() {
-    const formats = [...new Set(booksData.map(book => book.format).filter(f => f))];
+    const formats = [...new Set(
+        booksData.map(book => {
+            if (!book.format) return null;
+            return book.format.split('\n')[0].trim(); // Get only the format name
+        }).filter(f => f)
+    )];
+    formats.sort(); // Sort alphabetically
     formatFilter.innerHTML = '<option value="">All Formats</option>' + 
       formats.map(format => `<option value="${format}">${format}</option>`).join('');
   }
 
   function populateWishlistFilter() {
     const wishlists = [...new Set(booksData.map(book => book.wishlist_name).filter(w => w))];
+    wishlists.sort();
     wishlistFilter.innerHTML = '<option value="">All Wishlists</option>' + 
       wishlists.map(wishlist => `<option value="${wishlist}">${wishlist}</option>`).join('');
   }
@@ -473,7 +480,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     const isSelected = selectedBooks.has(book.title);
-    
+    const bookFormat = book.format ? book.format.split('\n')[0].trim() : 'N/A';
+
     return `
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card h-100 book-card ${isSelected ? 'selected' : ''}" data-title="${book.title}">
@@ -502,7 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="detail-item">
                 <span class="iconify" data-icon="mdi:book" data-width="18"></span>
                 <span class="detail-label">Format:</span>
-                <span class="detail-value">${book.format || 'N/A'}</span>
+                <span class="detail-value">${bookFormat}</span>
               </div>
               
               <div class="detail-item">
@@ -573,9 +581,11 @@ document.addEventListener('DOMContentLoaded', () => {
         (book.author && book.author.toLowerCase().includes(searchTerm)) ||
         (book.asin && book.asin.toLowerCase().includes(searchTerm));
 
+      const bookFormat = book.format ? book.format.split('\n')[0].trim() : '';
+
       if (!searchMatch) return false;
       if (selectedWishlist && book.wishlist_name !== selectedWishlist) return false;
-      if (selectedFormat && book.format !== selectedFormat) return false;
+      if (selectedFormat && bookFormat !== selectedFormat) return false;
       if (minPrice !== null && (book.price === null || book.price < minPrice)) return false;
       if (maxPrice !== null && (book.price === null || book.price > maxPrice)) return false;
       if (minPages !== null && (book.pages === null || book.pages < minPages)) return false;
@@ -594,7 +604,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const sortBy = sortBySelect.value;
     
     filteredBooks.sort((a, b) => {
-        let valA, valB;
         switch (sortBy) {
             case 'title':
                 return (a.title || "").localeCompare(b.title || "");
