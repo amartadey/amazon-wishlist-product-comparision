@@ -274,6 +274,7 @@ footer {
                 <div class="col-lg-3 col-md-6">
                     <label for="sort-by" class="form-label">Sort By</label>
                     <select class="form-select form-select-sm" id="sort-by">
+                        <option value="importance-rating">My Rating (High to Low)</option>
                         <option value="title">Title</option>
                         <option value="price-low">Price (Low to High)</option>
                         <option value="price-high">Price (High to Low)</option>
@@ -378,6 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         filteredBooks = [...booksData];
+        sortBooks(); // Initial sort
         displayBooks(filteredBooks);
         updateBookCount(filteredBooks.length);
         populateFilterRanges();
@@ -536,6 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'pages-high': return (b.pages ?? -Infinity) - (a.pages ?? -Infinity);
             case 'reviews': return (b.reviews ?? -1) - (a.reviews ?? -1);
             case 'value': return (a.value_per_page ?? Infinity) - (b.value_per_page ?? Infinity);
+            case 'importance-rating': return (b.importance_rating ?? 0) - (a.importance_rating ?? 0);
             default: return 0;
         }
     });
@@ -548,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
     minPriceInput.value = ''; maxPriceInput.value = '';
     minPagesInput.value = ''; maxPagesInput.value = '';
     minReviewsInput.value = '';
-    sortBySelect.value = 'title';
+    sortBySelect.value = 'importance-rating';
     filteredBooks = [...booksData];
     sortBooks();
     displayBooks(filteredBooks);
@@ -602,18 +605,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const rating = parseInt(e.target.dataset.value, 10);
             
             // Update the global ratings data object
-            ratingsData[asin] = rating;
+            const currentRating = ratingsData[asin] || 0;
+            ratingsData[asin] = (rating === currentRating) ? 0 : rating; // Toggle off if same star clicked
             
             // Update the main book data array for the current session
             const bookToUpdate = booksData.find(b => b.asin === asin);
-            if (bookToUpdate) bookToUpdate.importance_rating = rating;
+            if (bookToUpdate) bookToUpdate.importance_rating = ratingsData[asin];
             
             // Update UI directly for instant feedback
             const allStars = ratingContainer.querySelectorAll('.star');
             allStars.forEach(star => {
                 const starValue = parseInt(star.dataset.value, 10);
-                star.classList.toggle('filled', starValue <= rating);
-                star.dataset.icon = starValue <= rating ? 'mdi:star' : 'mdi:star-outline';
+                star.classList.toggle('filled', starValue <= ratingsData[asin]);
+                star.dataset.icon = starValue <= ratingsData[asin] ? 'mdi:star' : 'mdi:star-outline';
             });
         }
     });
@@ -623,8 +627,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const ratingContainer = e.target.parentElement;
             const hoverValue = parseInt(e.target.dataset.value, 10);
             ratingContainer.querySelectorAll('.star').forEach(star => {
-                const starValue = parseInt(star.dataset.value, 10);
-                star.dataset.icon = starValue <= hoverValue ? 'mdi:star' : 'mdi:star-outline';
+                star.dataset.icon = parseInt(star.dataset.value, 10) <= hoverValue ? 'mdi:star' : 'mdi:star-outline';
             });
         }
     });
