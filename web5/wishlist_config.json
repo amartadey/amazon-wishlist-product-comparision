@@ -1,0 +1,27 @@
+{
+    "wishlists": [
+        {
+            "name": "Business Books",
+            "url": "https://www.amazon.in/hz/wishlist/ls/1YZ6P9CMSTI9C"
+        },
+        {
+            "name": "Biography Books",
+            "url": "https://www.amazon.in/hz/wishlist/ls/1YHK51DVJYR2A"
+        },
+        {
+            "name": "Hardcover Books",
+            "url": "https://www.amazon.in/hz/wishlist/ls/31VZFN51IPTZX"
+        },
+        {
+            "name": "IT Books",
+            "url": "https://www.amazon.in/hz/wishlist/ls/OPIB1KQBJDHR"
+        },
+        {
+            "name": "General Books",
+            "url": "https://www.amazon.in/hz/wishlist/ls/1VY69P3F07HC8"
+        }
+    ],
+    "scraping": {
+        "max_workers": 4
+    }
+}
