@@ -100,6 +100,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 .book-details {
   display: flex;
@@ -183,6 +184,7 @@ footer {
 .star-rating {
     display: flex;
     cursor: pointer;
+    flex-grow: 1;
 }
 .star-rating .iconify {
     color: #ccc;
@@ -338,6 +340,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let ratingsData = {};
   let filteredBooks = [];
   let selectedBooks = new Set();
+  // NEW: Object to store value tiers
+  let valueTiers = { best: 0, worst: 0 };
   
   // DOM element references
   const booksContainer = document.getElementById('books-container');
@@ -378,6 +382,9 @@ document.addEventListener('DOMContentLoaded', () => {
             book.importance_rating = ratingsData[book.asin] || 0;
         });
 
+        // NEW: Calculate value tiers for color coding
+        calculateValueTiers(booksData);
+
         filteredBooks = [...booksData];
         sortBooks(); // Initial sort
         displayBooks(filteredBooks);
@@ -391,6 +398,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // NEW: Calculate value tiers based on cost per page
+  function calculateValueTiers(books) {
+    const validValues = books
+        .map(b => b.value_per_page)
+        .filter(v => v !== null && !isNaN(v))
+        .sort((a, b) => a - b);
+
+    if (validValues.length === 0) return;
+
+    // Use quartiles to determine tiers
+    const q1Index = Math.floor(validValues.length / 4);
+    const q3Index = Math.floor((validValues.length * 3) / 4);
+
+    valueTiers.best = validValues[q1Index];
+    valueTiers.worst = validValues[q3Index];
+  }
 
   // Populate filter dropdowns and placeholders
   function populateFilterRanges() {
@@ -421,7 +444,43 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayBooks(books) {
     noResults.classList.toggle('d-none', books.length > 0);
     booksContainer.innerHTML = books.map(book => createBookCard(book)).join('');
+    
+    // NEW: Initialize Bootstrap tooltips for the value indicators
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
     updateSelectionState();
+  }
+
+  // NEW: Helper function to get the value indicator HTML
+  function getValueIndicatorHTML(book) {
+    if (book.value_per_page === null || isNaN(book.value_per_page)) {
+        return '';
+    }
+
+    let color = 'var(--warning-color)'; // Orange for average
+    let label = 'Avg. Value';
+
+    if (book.value_per_page <= valueTiers.best) {
+        color = 'var(--success-color)'; // Green for best
+        label = 'Best Value';
+    } else if (book.value_per_page > valueTiers.worst) {
+        color = 'var(--danger-color)'; // Red for worst
+        label = 'Low Value';
+    }
+    
+    const tooltipText = `${label}: ₹${book.value_per_page.toFixed(2)}/page`;
+    const visibleText = `₹${book.value_per_page.toFixed(2)}/p`;
+
+
+    return `
+        <div class="value-indicator d-flex align-items-center gap-1" title="${tooltipText}" data-bs-toggle="tooltip" data-bs-placement="top">
+            <span class="iconify" data-icon="mdi:thumb-up" style="color: ${color}; font-size: 1.25rem;"></span>
+            <span style="font-size: 0.75rem; color: var(--dark-gray); font-weight: 500;">${visibleText}</span>
+        </div>
+    `;
   }
   
   function createBookCard(book) {
@@ -468,6 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="card-footer">
             <div class="star-rating" data-asin="${book.asin}">${starsHTML}</div>
+            ${getValueIndicatorHTML(book)}
             <a href="${book.link}" class="btn btn-primary btn-sm" target="_blank" title="View on Amazon">
               <span class="iconify" data-icon="mdi:shopping" data-width="16"></span>
             </a>
@@ -530,6 +590,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function sortBooks() {
     const sortBy = sortBySelect.value;
     filteredBooks.sort((a, b) => {
+        // Handle nulls for sorting
+        const aValue = a.value_per_page ?? Infinity;
+        const bValue = b.value_per_page ?? Infinity;
+
         switch (sortBy) {
             case 'title': return (a.title || "").localeCompare(b.title || "");
             case 'price-low': return (a.price ?? Infinity) - (b.price ?? Infinity);
@@ -537,7 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'pages': return (a.pages ?? Infinity) - (b.pages ?? Infinity);
             case 'pages-high': return (b.pages ?? -Infinity) - (a.pages ?? -Infinity);
             case 'reviews': return (b.reviews ?? -1) - (a.reviews ?? -1);
-            case 'value': return (a.value_per_page ?? Infinity) - (b.value_per_page ?? Infinity);
+            case 'value': return aValue - bValue;
             case 'importance-rating': return (b.importance_rating ?? 0) - (a.importance_rating ?? 0);
             default: return 0;
         }
@@ -599,10 +663,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     booksContainer.addEventListener('click', e => {
-        if (e.target.classList.contains('star')) {
-            const ratingContainer = e.target.parentElement;
+        const star = e.target.closest('.star');
+        if (star) {
+            const ratingContainer = star.parentElement;
             const asin = ratingContainer.dataset.asin;
-            const rating = parseInt(e.target.dataset.value, 10);
+            const rating = parseInt(star.dataset.value, 10);
             
             // Update the global ratings data object
             const currentRating = ratingsData[asin] || 0;
@@ -614,32 +679,34 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Update UI directly for instant feedback
             const allStars = ratingContainer.querySelectorAll('.star');
-            allStars.forEach(star => {
-                const starValue = parseInt(star.dataset.value, 10);
-                star.classList.toggle('filled', starValue <= ratingsData[asin]);
-                star.dataset.icon = starValue <= ratingsData[asin] ? 'mdi:star' : 'mdi:star-outline';
+            allStars.forEach(s => {
+                const starValue = parseInt(s.dataset.value, 10);
+                s.classList.toggle('filled', starValue <= ratingsData[asin]);
+                s.dataset.icon = starValue <= ratingsData[asin] ? 'mdi:star' : 'mdi:star-outline';
             });
         }
     });
 
     booksContainer.addEventListener('mouseover', e => {
-        if (e.target.classList.contains('star')) {
-            const ratingContainer = e.target.parentElement;
-            const hoverValue = parseInt(e.target.dataset.value, 10);
-            ratingContainer.querySelectorAll('.star').forEach(star => {
-                star.dataset.icon = parseInt(star.dataset.value, 10) <= hoverValue ? 'mdi:star' : 'mdi:star-outline';
+        const star = e.target.closest('.star');
+        if (star) {
+            const ratingContainer = star.parentElement;
+            const hoverValue = parseInt(star.dataset.value, 10);
+            ratingContainer.querySelectorAll('.star').forEach(s => {
+                s.dataset.icon = parseInt(s.dataset.value, 10) <= hoverValue ? 'mdi:star' : 'mdi:star-outline';
             });
         }
     });
 
     booksContainer.addEventListener('mouseout', e => {
-        if (e.target.classList.contains('star')) {
-            const ratingContainer = e.target.parentElement;
+        const star = e.target.closest('.star');
+        if (star) {
+            const ratingContainer = star.parentElement;
             const asin = ratingContainer.dataset.asin;
             const savedRating = ratingsData[asin] || 0;
-            ratingContainer.querySelectorAll('.star').forEach(star => {
-                const starValue = parseInt(star.dataset.value, 10);
-                star.dataset.icon = starValue <= savedRating ? 'mdi:star' : 'mdi:star-outline';
+            ratingContainer.querySelectorAll('.star').forEach(s => {
+                const starValue = parseInt(s.dataset.value, 10);
+                s.dataset.icon = starValue <= savedRating ? 'mdi:star' : 'mdi:star-outline';
             });
         }
     });
