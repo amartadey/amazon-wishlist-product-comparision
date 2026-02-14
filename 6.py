@@ -307,6 +307,7 @@ def load_config():
             {"name": "IT Books", "url": "https://www.amazon.in/hz/wishlist/ls/OPIB1KQBJDHR?ref_=wl_share"},
             {"name": "Hardcover Books", "url": "https://www.amazon.in/hz/wishlist/ls/31VZFN51IPTZX?ref_=wl_share"},
             {"name": "Biography Books", "url": "https://www.amazon.in/hz/wishlist/ls/1YHK51DVJYR2A?ref_=wl_share"},
+            {"name": "Penguin Books", "url": "https://www.amazon.in/hz/wishlist/ls/SO8O8O4HHG4?ref_=wl_share"},
         ],
         "scraping": {"max_workers": 4}
     }
